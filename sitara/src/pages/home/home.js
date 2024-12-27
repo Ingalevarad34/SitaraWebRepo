@@ -1,14 +1,12 @@
-function home() {
-    return(
-        <>
-           <div className="container">
-            <div className="row">
-                <div className="col-md-6 col-sm-12">hello</div>
-                <div className="col-md-6 col-sm-12">sitara</div>
-            </div>
-           </div>
-        </>
-    );
+import IntroSection from "../../components/Home/IntroSection";
+function Home() {
+  return (
+  
+      <div className="">
+        <IntroSection />
+      </div>
+    
+  );
 }
 
-export default home;
+export default Home;
