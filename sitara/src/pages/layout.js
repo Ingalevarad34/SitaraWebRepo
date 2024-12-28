@@ -1,27 +1,13 @@
-import { Outlet, Link } from "react-router-dom";
-function layout(params) {
+import { Outlet } from "react-router-dom";
+
+function Layout() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/albums">Albums</Link>
-          </li>
-          <li>
-            <Link to="/artists">Artists</Link>
-          </li>
-          <li>
-            <Link to="/discover">Discover</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
+      <main>
+        <Outlet /> {/* This is where the specific page content will be rendered */}
+      </main>
     </>
-  )
+  );
 }
 
-export default layout;
+export default Layout;

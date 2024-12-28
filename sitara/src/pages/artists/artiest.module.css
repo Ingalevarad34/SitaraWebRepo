@@ -1,0 +1,33 @@
+/* Custom styles */
+.bg-image {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background-blend-mode: darken;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .text-pink {
+    color: #ff007f;
+  }
+  
+  .btn-pink {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+  }
+  
+  .btn-pink:hover {
+    background-color: #e60072;
+  }
+  
+  .container h1 span {
+    color: #ff007f; /* Highlighted text */
+  }
+  
+  .lead {
+    max-width: 600px;
+  }
+  
