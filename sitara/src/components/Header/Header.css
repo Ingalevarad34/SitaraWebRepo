@@ -37,3 +37,13 @@
     background-color: #ee10b0;
     color: whitesmoke;
   }
+
+  .nav-btn{
+    width: 55%;
+  }
+
+  @media (max-width: 576px) {
+    .nav-btn{
+      width: 100%;
+    }
+  }

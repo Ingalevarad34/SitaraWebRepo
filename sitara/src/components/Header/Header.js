@@ -44,7 +44,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-          <div className="d-flex" style={{ width: '55%' }}>
+          <div className="d-flex nav-btn">
             <button className="btn btn-outline-light me-5 lato-regular  border-pink" style={{ width: '40%' }}>Login</button>
             <button className="btn btn-outline-light me-2 lato-regular  border-pink" style={{ width: '40%' }}>Sign Up</button>
           </div>
