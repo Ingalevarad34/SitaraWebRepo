@@ -1,3 +1,7 @@
-body {
-    overflow: hidden; /* Hide scrollbars */
+/* body {
+    overflow: hidden; 
+  } */
+
+  body{
+    background-color: hsl(0, 0%, 9%);
   }

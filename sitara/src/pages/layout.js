@@ -5,6 +5,7 @@ function Layout() {
     <>
       <main>
         <Outlet /> {/* This is where the specific page content will be rendered */}
+        
       </main>
     </>
   );
