@@ -1,0 +1,20 @@
+.video-title{
+    text-align: start;
+    font-family: "lato" serif;
+    font-size: 20px;
+}
+
+.video-artist{
+    text-align: start;
+    font-weight: 300;
+}
+
+.video-views{
+
+    font-size: 12px;
+}
+
+.text-pink {
+
+    color: #ee10b0;
+}

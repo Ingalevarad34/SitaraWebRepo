@@ -1,7 +1,7 @@
 // components/Home/IntroSection.js
 // import IntoImg from "../../images/introimg.png";
 import './IntroSection.css';  // Ensure the correct path to the CSS
-import Header from "../../components/Header/Header.js"; // Ensure Header is included
+import Header from "../../../components/Header/Header.js"; // Ensure Header is included
 
 function IntroSection() {
   return (

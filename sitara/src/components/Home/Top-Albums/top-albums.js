@@ -1,38 +1,40 @@
 import React from 'react'
-import Time from '../../../images/time.jpeg'
-import jazzek from '../../../images/112.png';
-import WeDontCare from '../../../images/we-dont-care.jpeg';
-import WhoAmI from '../../../images/who-am-i.jpeg';
-import xxamerica from '../../../images/baxio.jpeg'
-import './New-Relese.css';
+import './top-albums.css'
+import AdeleTwentyOne from '../../../images/adele-21.png';
+import Scorpion from '../../../images/scorpion.jpeg';
+import HarrysHouse from '../../../images/harrys-house.png';
+import BornToDie from '../../../images/born-to-die.png';
+import BeautyBehindMadness from '../../../images/beauty-behind-the-madness.png';
 
-function NewReleseSongs() {
 
-    const songs = [
+
+function TopAlbums() {
+    
+ const songs = [
         {
-            title: "Time",
-            artist: "Lucaino",
-            image: Time
+            title: "Adele 21",
+            artist: "Adele",
+            image: AdeleTwentyOne
         },
         {
-            title: "112",
-            artist: "jazzek",
-            image: jazzek
+            title: "Scorpion",
+            artist: "Drake",
+            image: Scorpion
         },
         {
-            title: "We Don't Care",
-            artist: "Kyanu & Dj Gullum",
-            image: WeDontCare
+            title: "Harry's House",
+            artist: "Harry Styles",
+            image: HarrysHouse
         },
         {
-            title: "Who I Am",
-            artist: "Alan Walker & Elias",
-            image: WhoAmI
+            title: "Born To Die",
+            artist: "Lana Dey Ray",
+            image: BornToDie
         },
         {
-            title: "Baixo",
-            artist: "XXAnteria",
-            image: xxamerica
+            title: "Beauty Behind the...",
+            artist: "The Weekend",
+            image: BeautyBehindMadness
         },
     ];
 
@@ -55,7 +57,7 @@ function NewReleseSongs() {
                                     style={{ borderRadius: "10px" }}
                                 />
                                 <div className="card-body text-center">
-                                    <h6 className="card-title "style={{ fontSize : "20px" }}>{song.title}</h6>
+                                    <h6 className="card-title "style={{ fontSize : "18px" }}>{song.title}</h6>
                                     <p className="card-text fs-7"style={{ fontWeight: "300" }}>{song.artist}</p>
 
                                 </div>
@@ -90,4 +92,4 @@ function NewReleseSongs() {
 
 }
 
-export default NewReleseSongs;
+export default TopAlbums;
