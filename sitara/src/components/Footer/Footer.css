@@ -1,0 +1,32 @@
+.footer{
+    background-color: #212529;
+}
+ul{
+    list-style-type: none;
+}
+
+ul .footer-li{
+    margin-bottom: 10px;
+}
+
+div .footer-para{
+    border: 2px solid whitesmoke;
+}
+
+.lato-regular-footer {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+p ,li{
+    font-size: 14px;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ff007c, #4f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }

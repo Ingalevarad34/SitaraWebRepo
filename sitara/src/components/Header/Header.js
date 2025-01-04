@@ -6,10 +6,10 @@ function Header() {
     <>
       {/* NavBar start */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
-        <Link className="navbar-brand me-5" style={{ color: '#ee10b0' }} to="/">
+        <Link className="navbar-brand me-5 gradient-text"  to="/">
           🎵 SITARA
         </Link>
-        <div className="input-group">
+        <div className="input-group input-design">
           <span className="input-group-text bg-color border-0">
             <i class="fa-solid fa-magnifying-glass fa-flip-horizontal" style={{ color: '#ffffff' }}></i>
           </span>

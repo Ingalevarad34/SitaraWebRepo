@@ -1,0 +1,128 @@
+.lato-bold {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.contact-para {
+    text-align: justify;
+    width: 373px;
+}
+
+.lato-regular-contact {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+/* input box design */
+
+.input-group {
+    width: 100% !important;
+}
+
+.form-control::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+/* hr design */
+
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.line {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #fff;
+    height: 0;
+}
+
+.text {
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* button design */
+
+.btn-color {
+    background-color: #ee10b0;
+}
+
+/* Toggle Container */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffff; /* Light purple color */
+    background: none;
+    border: none;
+    margin: 0 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.toggle-btn.active {
+    color: #ee10b0; /* Pink color for the active state */
+}
+
+.toggle-btn.active::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ee10b0; /* Pink underline */
+    position: absolute;
+    bottom: -5px; /* Adjust spacing from the text */
+    left: 0;
+    border-radius: 2px;
+}
+
+/* Divider Styling */
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.divider-container .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+
+.divider-container .text {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* General Button Styling */
+.btn-color {
+    background-color: #ee10b0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-color:hover {
+    background-color: #ee10b0; /* Slightly darker pink for hover */
+}
