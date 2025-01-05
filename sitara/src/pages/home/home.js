@@ -1,4 +1,5 @@
 
+import Footer from "../../components/Footer/Footer";
 import IntroSection from "../../components/Home/Intro-Section/IntroSection";
 import MoodPlaylist from "../../components/Home/Mood-Playlist/mood-playlist";
 import MusicVideo from "../../components/Home/Music-video/music-video";
@@ -20,6 +21,7 @@ function Home() {
         <MusicVideo />
         <TopAlbums />
         <MoodPlaylist />
+        <Footer />
         
         
       </div>
