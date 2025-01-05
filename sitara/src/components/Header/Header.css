@@ -11,7 +11,7 @@
     color: white;
   }
 
-  .input-group{
+  .input-design{
     width: 25% !important;
   }
 
@@ -41,6 +41,14 @@
   .nav-btn{
     width: 55%;
   }
+
+  
+.gradient-text {
+  background: linear-gradient(to right, #ff007c, #4f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
 
   @media (max-width: 576px) {
     .nav-btn{

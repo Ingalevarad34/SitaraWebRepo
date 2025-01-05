@@ -5,6 +5,7 @@ import MusicVideo from "../../components/Home/Music-video/music-video";
 import NewReleseSongs from "../../components/Home/New-Relese-songs/New-Relese";
 import PopularArtists from "../../components/Home/Popular-Artists/popular-artist";
 import TopAlbums from "../../components/Home/Top-Albums/top-albums";
+import TrendingSongs from "../../components/Home/Trending-songs/TrendingSongs";
 import TopSongs from "../../components/Home/weekly-top-songs/topSongs";
 
 function Home() {
@@ -14,10 +15,12 @@ function Home() {
         <IntroSection />
         <TopSongs />
         <NewReleseSongs />
+        <TrendingSongs />
         <PopularArtists />
         <MusicVideo />
         <TopAlbums />
         <MoodPlaylist />
+        
         
       </div>
     
