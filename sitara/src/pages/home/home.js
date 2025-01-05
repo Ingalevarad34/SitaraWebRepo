@@ -1,4 +1,5 @@
 
+import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import IntroSection from "../../components/Home/Intro-Section/IntroSection";
 import MoodPlaylist from "../../components/Home/Mood-Playlist/mood-playlist";
@@ -11,21 +12,23 @@ import TopSongs from "../../components/Home/weekly-top-songs/topSongs";
 
 function Home() {
   return (
-  
-      <div className="">
-        <IntroSection />
-        <TopSongs />
-        <NewReleseSongs />
-        <TrendingSongs />
-        <PopularArtists />
-        <MusicVideo />
-        <TopAlbums />
-        <MoodPlaylist />
-        <Footer />
-        
-        
-      </div>
-    
+
+    <div className="">
+      <IntroSection />
+      <TopSongs />
+      <NewReleseSongs />
+      <TrendingSongs />
+      <PopularArtists />
+      <MusicVideo />
+      <TopAlbums />
+      <MoodPlaylist />
+      <Contact />
+      <Footer />
+
+
+
+    </div>
+
   );
 }
 
