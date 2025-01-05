@@ -1,5 +1,6 @@
 
 import IntroSection from "../../components/Home/Intro-Section/IntroSection";
+import MoodPlaylist from "../../components/Home/Mood-Playlist/mood-playlist";
 import MusicVideo from "../../components/Home/Music-video/music-video";
 import NewReleseSongs from "../../components/Home/New-Relese-songs/New-Relese";
 import PopularArtists from "../../components/Home/Popular-Artists/popular-artist";
@@ -16,6 +17,7 @@ function Home() {
         <PopularArtists />
         <MusicVideo />
         <TopAlbums />
+        <MoodPlaylist />
         
       </div>
     
