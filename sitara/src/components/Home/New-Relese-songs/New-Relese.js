@@ -65,19 +65,21 @@ function NewReleseSongs() {
                     </div>
                 ))}
                 {/* View All Button */}
-                <div className="col-md-2 col-sm-6 mb-4 d-flex align-items-center justify-content-center">
+                <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
                     <button
                         className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
                         style={{
-                            width: "90px",
-                            height: "90px",
-                            fontSize: "14px",
+                            width: "60px",
+                            height: "60px",
+                            fontSize: "30px",
                             color: "#fff",
+                            fontWeight:"bold"
                         }}
                     >
-                        <span className="fs-4">+</span>
-                        View All
+                        <span>+</span>
+                    
                     </button>
+                    <div className='text-white mt-2' style={{fontSize:"14px"}}>View All</div>
                 </div>
             </div>
             {/* For smaller screens: Horizontal scroll */}
@@ -101,19 +103,21 @@ function NewReleseSongs() {
                     </div>
                 ))}
                 {/* View All Button */}
-                <div className="col-md-2 col-sm-6 mb-4 d-flex align-items-center justify-content-center">
+                <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
                     <button
                         className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
                         style={{
-                            width: "90px",
-                            height: "90px",
-                            fontSize: "14px",
+                            width: "60px",
+                            height: "60px",
+                            fontSize: "30px",
                             color: "#fff",
+                            fontWeight:"bold"
                         }}
                     >
-                        <span className="fs-4">+</span>
-                        View All
+                        <span>+</span>
+                    
                     </button>
+                    <div className='text-white mt-2' style={{fontSize:"14px"}}>View All</div>
                 </div>
             </div>
         </div>
