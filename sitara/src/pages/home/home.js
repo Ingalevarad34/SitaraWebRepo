@@ -1,4 +1,5 @@
 
+import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import IntroSection from "../../components/Home/Intro-Section/IntroSection";
 import MoodPlaylist from "../../components/Home/Mood-Playlist/mood-playlist";
@@ -21,6 +22,7 @@ function Home() {
         <MusicVideo />
         <TopAlbums />
         <MoodPlaylist />
+        <Contact />
         <Footer />
         
         
