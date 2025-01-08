@@ -22,6 +22,7 @@ function Home() {
         <MusicVideo />
         <TopAlbums />
         <MoodPlaylist />
+        <Contact />
         <Footer />
         
         
