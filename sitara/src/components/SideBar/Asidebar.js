@@ -1,78 +1,89 @@
-import React from "react";
-import "./Asidebar.css"; // Link to your external CSS file
+import "./styles.css";
+import React, { useState } from "react";
+import {
+  RiHome4Line,
+  RiTeamLine,
+  RiCalendar2Line,
+  RiFolder2Line,
+  RiUserFollowLine,
+  RiPlantLine,
+  RiStackLine,
+  RiUserUnfollowLine
+} from "react-icons/ri";
+import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi/";
+import {
+  Sidebar,
+  SubMenu,
+  Menu,
+  MenuItem
+  //useProSidebar
+} from "react-pro-sidebar";
+function Sidebars() {
+  //const { collapseSidebar } = useProSidebar();
+  const [collapsed, setCollapsed] = useState(false);
 
-const Asidebar = () => {
+  const [toggled, setToggled] = useState(false);
+
+  const handleCollapsedChange = () => {
+    setCollapsed(!collapsed);
+  };
+  const handleToggleSidebar = (value) => {
+    setToggled(value);
+  };
+
   return (
     <div>
-      <div className="area"></div>
-      <nav className="main-menu">
-        <ul>
-          <li>
-            <a href="https://jbfarrow.com">
-              <i className="fa fa-home fa-2x"></i>
-              <span className="nav-text">Community Dashboard</span>
-            </a>
-          </li>
-          <li className="has-subnav">
-            <a href="#">
-              <i className="fa fa-globe fa-2x"></i>
-              <span className="nav-text">Global Surveyors</span>
-            </a>
-          </li>
-          <li className="has-subnav">
-            <a href="#">
-              <i className="fa fa-comments fa-2x"></i>
-              <span className="nav-text">Group Hub Forums</span>
-            </a>
-          </li>
-          <li className="has-subnav">
-            <a href="#">
-              <i className="fa fa-camera-retro fa-2x"></i>
-              <span className="nav-text">Survey Photos</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa fa-film fa-2x"></i>
-              <span className="nav-text">Surveying Tutorials</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa fa-book fa-2x"></i>
-              <span className="nav-text">Surveying Jobs</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa fa-cogs fa-2x"></i>
-              <span className="nav-text">Tools & Resources</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa fa-map-marker fa-2x"></i>
-              <span className="nav-text">Member Map</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa fa-info fa-2x"></i>
-              <span className="nav-text">Documentation</span>
-            </a>
-          </li>
-        </ul>
-        <ul className="logout">
-          <li>
-            <a href="#">
-              <i className="fa fa-power-off fa-2x"></i>
-              <span className="nav-text">Logout</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Sidebar
+        className={`app ${toggled ? "toggled" : ""}`}
+        style={{ height: "100%", position: "absolute" }}
+        collapsed={collapsed}
+        toggled={toggled}
+        handleToggleSidebar={handleToggleSidebar}
+        handleCollapsedChange={handleCollapsedChange}
+      >
+        <main>
+          <Menu>
+            {collapsed ? (
+              <MenuItem
+                icon={<FiChevronsRight />}
+                onClick={handleCollapsedChange}
+              ></MenuItem>
+            ) : (
+              <MenuItem
+                suffix={<FiChevronsLeft />}
+                onClick={handleCollapsedChange}
+              >
+                <div
+                  style={{
+                    padding: "9px",
+                    // textTransform: "uppercase",
+                    fontWeight: "bold",
+                    fontSize: 14,
+                    letterSpacing: "1px"
+                  }}
+                >
+                  YOUR LOGO!..
+                </div>
+              </MenuItem>
+            )}
+            <hr />
+          </Menu>
+
+          <Menu>
+            <MenuItem icon={<RiHome4Line />}>Dashboard</MenuItem>
+            <SubMenu defaultOpen label={"Professors"} icon={<RiTeamLine />}>
+              <MenuItem icon={<RiUserFollowLine />}>Active </MenuItem>
+              <MenuItem icon={<RiUserUnfollowLine />}>Ex Professors</MenuItem>
+              <MenuItem icon={<RiCalendar2Line />}>Probation Period</MenuItem>
+            </SubMenu>
+            <SubMenu defaultOpen label={"Records"} icon={<RiFolder2Line />}>
+              <MenuItem icon={<RiStackLine />}>Senior Students</MenuItem>
+              <MenuItem icon={<RiPlantLine />}>Junior Students</MenuItem>
+            </SubMenu>
+          </Menu>
+        </main>
+      </Sidebar>
     </div>
   );
-};
-
-export default Asidebar;
+}
+export default Sidebars;
