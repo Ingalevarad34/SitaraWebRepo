@@ -4,17 +4,15 @@ import './music-video.css';
 import Gossip from '../../../images/goosip.jpeg';
 import ShapeOfYou from '../../../images/shape-of-you.jpeg';
 import SomeOneLikeYou from '../../../images/someone-like-you.jpeg';
+import ShakeItOff from '../../../images/shake-it-off.jpeg';
+import NewRules from '../../../images/new-rules.jpeg';
+import WakaWaka from '../../../images/waka-waka.png';
 
 
 function MusicVideo() {
 
     const videos = [
-        {
-            title: "Gossip",
-            artist: "Måneskin",
-            views: "3M views",
-            thumbnail: Gossip
-        },
+
         {
             title: "Shape Of You",
             artist: "Ed Sheeran",
@@ -22,10 +20,38 @@ function MusicVideo() {
             thumbnail: ShapeOfYou
         },
         {
+            title: "Gossip",
+            artist: "Måneskin",
+            views: "3M views",
+            thumbnail: Gossip
+        },
+
+        {
+            title: "Shake it Off",
+            artist: "Taylor swift",
+            views: "4.2M views",
+            thumbnail: ShakeItOff
+        },
+        
+        {
             title: "Someone Like You",
             artist: "Adele",
             views: "3M views",
             thumbnail: SomeOneLikeYou
+        },
+
+        
+        {
+            title: "New Rules",
+            artist: "Dualipa",
+            views: "3.7M views",
+            thumbnail: NewRules
+        },
+        {
+            title: "Waka Waka",
+            artist: "Shakira",
+            views: "3.1M views",
+            thumbnail: WakaWaka
         },
     ];
 
@@ -35,8 +61,9 @@ function MusicVideo() {
                 Music <span className="text-pink">Video</span>
             </h2>
             <div className="row  mt-4">
+
                 {videos.map((video, index) => (
-                    <div key={index} className="col-md-3">
+                    <div key={index} className="col-md-4 mb-3">
                         <div className="card bg-dark text-white border-0 mb-4" style={{ height: "250px" }}>
                             <img
                                 src={video.thumbnail}
@@ -59,7 +86,7 @@ function MusicVideo() {
                     </div>
                 ))}
                 
-                <div className="mt-5 col-md-3">
+                <div className="text-center">
                     <div
                         className=" rounded-circle d-flex justify-content-center align-items-center mt-2"
                         style={{
@@ -69,29 +96,13 @@ function MusicVideo() {
                             color: "white",
                             fontSize: "30px",
                             fontWeight: "bold",
-                            marginLeft: "50px"
+                            marginLeft: "638px"
                         }}
                     >
                         +
                     </div>
                     <p className="mt-2 text-white ms-5">View All</p>
                 </div>
-
-
-                {/* <div className="col-md-3 d-flex flex-column align-items-center">
-                    <div
-                        className="d-flex justify-content-center align-items-center bg-dark text-white rounded-circle"
-                        style={{
-                            width: "90px",
-                            height: "90px",
-                            fontSize: "30px",
-                            fontWeight: "bold",
-                        }}
-                    >
-                        +
-                    </div>
-                    <p className="mt-3 text-white">View All</p>
-                </div> */}
             </div>
         </div>
     );
