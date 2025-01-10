@@ -1,0 +1,11 @@
+.card-img {
+    object-fit: fill
+    ;
+    height: 100%; /* Ensures full height */
+    width: 100%;  /* Ensures full width */
+  }
+
+  .img-card{
+    margin-top:20px;
+    margin-left: 20px;
+  }

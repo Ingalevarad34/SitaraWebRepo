@@ -1,0 +1,23 @@
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .text-pink {
+    color: #ee10b0;
+  }
+  
+  /* Horizontal scroll styling for smaller screens */
+  .horizontal-scroll {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 1rem; /* Space between cards */
+    padding-bottom: 1rem; /* Add padding for better visuals */
+  }
+  
+  .horizontal-scroll .card {
+    flex: 0 0 auto; /* Ensure the cards don’t shrink */
+    width: 150px; /* Fixed width for consistent layout */
+  }
+  
