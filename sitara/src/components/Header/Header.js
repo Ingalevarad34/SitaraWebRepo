@@ -7,7 +7,7 @@ function Header() {
       {/* NavBar start */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
         <Link className="navbar-brand me-5 gradient-text"  to="/">
-          🎵 SITARA
+         
         </Link>
         <div className="input-group input-design">
           <span className="input-group-text bg-color border-0">
@@ -28,17 +28,17 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item ms-5 lato-bold" >
+            <li className="nav-item ms-3 lato-bold" >
               <Link className="nav-link" style={{ color: 'white' }} to="/artists">
                 About Us
               </Link>
             </li>
-            <li className="nav-item ms-5 lato-bold">
+            <li className="nav-item ms-3 lato-bold">
               <Link className="nav-link" style={{ color: 'white' }} to="/albums">
                 Contact
               </Link>
             </li>
-            <li className="nav-item ms-5 me-5 lato-bold">
+            <li className="nav-item ms-3 me-5 lato-bold">
               <Link className="nav-link" style={{ color: 'white' }} to="/discover">
                 Premium
               </Link>
