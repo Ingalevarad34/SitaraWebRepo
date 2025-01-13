@@ -32,7 +32,7 @@ function MusicVideo() {
             views: "4.2M views",
             thumbnail: ShakeItOff
         },
-        
+
         {
             title: "Someone Like You",
             artist: "Adele",
@@ -40,7 +40,7 @@ function MusicVideo() {
             thumbnail: SomeOneLikeYou
         },
 
-        
+
         {
             title: "New Rules",
             artist: "Dualipa",
@@ -85,7 +85,7 @@ function MusicVideo() {
                         </div>
                     </div>
                 ))}
-                
+
                 <div className="text-center">
                     <div
                         className=" rounded-circle d-flex justify-content-center align-items-center mt-2"

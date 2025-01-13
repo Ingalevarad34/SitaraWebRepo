@@ -1,0 +1,116 @@
+/* Album.css */
+
+.album-container {
+    background: linear-gradient(to right, #0052cc, #4364f7);
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.album-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.album-cover {
+    flex-shrink: 0;
+}
+
+.img-fluid {
+    width: 220px !important;
+}
+
+.albumTopImg {
+    box-shadow: 7px 7px 6px 1px #134c88;
+
+}
+
+.album-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.mix-highlight {
+    color: #ff007f;
+}
+
+.album-description {
+    margin: 10px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.album-details {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.dot {
+    margin: 0 8px;
+}
+
+.play-all-button {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.play-all-button:hover {
+    background-color: #e60072;
+}
+
+.album-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.heart-icon:hover {
+    transform: scale(1.2);
+    color: #ff007f;
+}
+
+td {
+    background-color: transparent !important;
+}
+
+.tr {
+    background-color: #1e1e1e;
+}
+
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.btn-album {
+    margin-right: 135px;
+    margin-top: -55px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #ff007f;
+}

@@ -81,17 +81,17 @@ const PopularSongs = () => {
           <tbody>
             {songs.map((song, index) => (
               <tr key={song.id}>
-                <td>{`#${index + 1}`}</td>
-                <td>
+                <td className='td'>{`#${index + 1}`}</td>
+                <td className='td'>
                   <img src={song.image} alt={song.title} className="song-image" />
                   <span className="ps-3">{song.title}</span>
                 </td>
-                <td>{song.releaseDate}</td>
-                <td className='text-center'>{song.Played}</td>
-                <td>
+                <td className='td'>{song.releaseDate}</td>
+                <td className='text-center td'>{song.Played}</td>
+                <td className='td'>
                   <FontAwesomeIcon icon={faHeart} className="heart-icon" />
                 </td>
-                <td>{song.time}</td>
+                <td className='td'>{song.time}</td>
               </tr>
             ))}
           </tbody>

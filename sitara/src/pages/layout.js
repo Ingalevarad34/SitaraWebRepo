@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./layout.css";
+import { Link } from "react-router-dom";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import {
   FaHome,         // Home icon
@@ -31,17 +32,33 @@ function Layout() {
         className="sidebar"
       >
         <div className="sidebar-header mt-3">
-          <h2 className="gradient-text"> 🎵 SITARA</h2>
+          <h2 className="gradient-text"><Link className="" to="/">
+            🎵 SITARA
+          </Link></h2>
         </div>
         <Menu>
           {/* Menu Section */}
           <p className="section-title">Menu</p>
           <MenuItem icon={<FaHome />} className="active-menu-item">
-            Home
+            <Link className="" to="/">
+              Home
+            </Link>
+
           </MenuItem>
-          <MenuItem icon={<FaSearch />}>Discover</MenuItem>
-          <MenuItem icon={<FaMusic />}>Albums</MenuItem>
-          <MenuItem icon={<FaUser />}>Artists</MenuItem>
+          <MenuItem icon={<FaSearch />}><Link className="" to="/discover">
+            Discover
+          </Link>
+          </MenuItem>
+          <MenuItem icon={<FaMusic />}>
+            <Link className="" to="/albums">
+              Albums
+            </Link>
+          </MenuItem>
+          <MenuItem icon={<FaUser />}>
+            <Link className="" to="/artists">
+              Artists
+            </Link>
+          </MenuItem>
 
           {/* Library Section */}
           <p className="section-title">Library</p>
