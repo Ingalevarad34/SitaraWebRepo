@@ -33,7 +33,7 @@ function MusicGenres() {
           <div className="col-md-3">
             <div className="card bg-dark text-white">
               <img
-                src= {PopTracks}
+                src={PopTracks}
                 className="card-img"
                 alt="Pop Tracks"
                 style={{ objectFit: "cover", height: "200px" }}
@@ -59,7 +59,7 @@ function MusicGenres() {
           <div className="col-md-3">
             <div className="card bg-dark text-white">
               <img
-                src= {ClassicTracks}
+                src={ClassicTracks}
                 className="card-img"
                 alt="Classic Tracks"
                 style={{ objectFit: "cover", height: "200px" }}
@@ -81,7 +81,7 @@ function MusicGenres() {
               color: "white",
               fontSize: "30px",
               fontWeight: "bold",
-              marginLeft : "50px"
+              marginLeft: "50px"
             }}
           >
             +

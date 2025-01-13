@@ -5,7 +5,7 @@ import MusicGenres from "../../components/Home/Music-Geners/music-generes.js";
 import MusicVideo from "../../components/Home/Music-video/music-video.js";
 import NewReleseSongs from "../../components/Home/New-Relese-songs/New-Relese.js";
 import PopularArtists from "../../components/Home/Popular-Artists/popular-artist.js";
-import Premimum_TopAlbums from "../../components/Home/Premimum-top-albums/Premimum-albums.js";
+import PremimumTopAlbums from "../../components/Home/Premimum-top-albums/Premimum-albums.js";
 function discover(params) {
     return(
         <>
@@ -16,7 +16,7 @@ function discover(params) {
                 <PopularArtists/>
                 <MusicVideo />
                 <NewReleseSongs />
-                <Premimum_TopAlbums />
+                <PremimumTopAlbums />
                 <Footer />
 
             </div>

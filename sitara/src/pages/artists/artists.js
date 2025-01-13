@@ -6,7 +6,6 @@ import PopularSongs from "../../components/Artists/Popular-Songs/PopularSongs";
 import SingleSongs from "../../components/Artists/Single-songs/SingleSong";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import TopAlbums from "../../components/Home/Top-Albums/top-albums";
 
 
 function artists(params) {

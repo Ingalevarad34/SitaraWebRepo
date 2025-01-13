@@ -1,10 +1,8 @@
 import React from 'react';
 import FiftyCent from '../../../images/50-cent.jpeg';
 import SnoopDog from '../../../images/snoop-dog.jpeg';
-import Tupac from '../../../images/tupac.jpeg';
 import harryStyles from '../../../images/harry-styles.jpeg';
 import JayZ from '../../../images/jay_z.jpeg';
-import TupacTwo from '../../../images/tupac-2.png';
 import TupacThree from '../../../images/tupac-3.jpg';
 
 import './OtherArtist.css'
