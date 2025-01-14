@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./layout.css";
 import { Link } from "react-router-dom";
+import { handleLogout } from "../components/FirebaseAuth/profile";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import {
   FaHome,         // Home icon
@@ -76,7 +77,10 @@ function Layout() {
           <p className="section-title">General</p>
           <MenuItem icon={<FaCog />}>Setting</MenuItem>
           <MenuItem icon={<FaSignOutAlt />} className="logout-item">
-            Logout
+            <Link className="logout-color" onClick={handleLogout}>
+              Logout
+            </Link>
+
           </MenuItem>
         </Menu>
       </Sidebar>

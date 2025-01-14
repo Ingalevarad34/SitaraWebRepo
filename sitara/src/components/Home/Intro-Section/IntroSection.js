@@ -3,7 +3,7 @@
 import './IntroSection.css';  // Ensure the correct path to the CSS
 import Header from "../../../components/Header/Header.js"; // Ensure Header is included
 
-function IntroSection() {
+function IntroSection() {  
   return (
     <>
       <div className="introSection">

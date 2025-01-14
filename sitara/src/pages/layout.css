@@ -9,8 +9,10 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  background-color: #121212; /* Dark background */
-  color: white; /* Default text color */
+  background-color: #121212;
+  /* Dark background */
+  color: white;
+  /* Default text color */
   width: 250px;
   transition: width 0.3s ease;
 }
@@ -23,7 +25,7 @@
 .gradient-text {
   font-size: 24px;
   font-weight: bold;
-  background: linear-gradient(90deg, #ff00ff, #8000ff);
+  background: linear-gradient(90deg, #ff007f, #7f00ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -55,8 +57,16 @@
   color: #00bfff;
 }
 
+.logout-color {
+  color: inherit;
+}
+
 .logout-item {
   color: #ff0080;
+}
+
+.logout-item:hover {
+  color: whitesmoke;
 }
 
 /* Content Area */
@@ -66,14 +76,15 @@
   overflow-y: auto;
 }
 
-.css-1t8x7v1 >.ps-menu-button:hover {
+.css-1t8x7v1>.ps-menu-button:hover {
   background-color: #ff00ff !important;
 }
 
-.css-1wvake5.ps-collapsed{
+.css-1wvake5.ps-collapsed {
   width: 85px !important;
 }
-a{
+
+a {
   text-decoration: none;
-  color:whitesmoke;
+  color: whitesmoke;
 }
