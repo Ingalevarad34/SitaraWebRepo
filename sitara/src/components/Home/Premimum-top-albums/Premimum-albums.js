@@ -1,10 +1,10 @@
 import React from 'react'
 import './Premimum-albums.css';
-import IGotHeven from '../../../images/i-got-heven.jpeg';
-import Saviors from '../../../images/saviors.jpeg';
-import LossOfLife from '../../../images/loss-of-life.png';
-import AllQuitOnTheEast from '../../../images/all-quit-on.png';
-import LittleRope from '../../../images/little-rope.png';
+import IGotHeven from '../../../images/Top-Albums/i-got-heven.jpeg';
+import Saviors from '../../../images/Top-Albums/saviors.jpeg';
+import LossOfLife from '../../../images/Top-Albums/loss-of-life.png';
+import AllQuitOnTheEast from '../../../images/Top-Albums/all-quit-on.png';
+import LittleRope from '../../../images/Top-Albums/little-rope.png';
 
 function Premimum_TopAlbums(params) {
      const songs = [

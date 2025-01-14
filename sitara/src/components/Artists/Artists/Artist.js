@@ -1,6 +1,6 @@
 import React from "react";
 import './Artist.css';
-import Eminem1 from '../../../images/img-1.jpg';
+import Eminem1 from '../../../images/Artist-img/Artist-img.jpg';
 
 
 

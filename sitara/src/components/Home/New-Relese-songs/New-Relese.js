@@ -1,9 +1,9 @@
 import React from 'react'
-import Time from '../../../images/time.jpeg'
-import jazzek from '../../../images/112.png';
-import WeDontCare from '../../../images/we-dont-care.jpeg';
-import WhoAmI from '../../../images/who-am-i.jpeg';
-import xxamerica from '../../../images/baxio.jpeg'
+import Time from '../../../images/New-Relese-Songs/time.jpeg'
+import jazzek from '../../../images/New-Relese-Songs/112.png';
+import WeDontCare from '../../../images/New-Relese-Songs/we-dont-care.jpeg';
+import WhoAmI from '../../../images/New-Relese-Songs/who-am-i.jpeg';
+import xxamerica from '../../../images/New-Relese-Songs/baxio.jpeg'
 import './New-Relese.css';
 
 function NewReleseSongs() {

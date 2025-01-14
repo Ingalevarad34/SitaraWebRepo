@@ -2,11 +2,11 @@ import React from 'react';
 import './PopularSongs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import WithoutMe from '../../../images/superman.jpeg';
-import MockingBird from '../../../images/mocking-bird.jpg';
-import TheRealSlimShady from '../../../images/slim-shady.jpeg';
-import LoseYourself from '../../../images/lose-yourself.jpeg';
-import Godzila from '../../../images/music-to-be-murdered.jpeg';
+import WithoutMe from '../../../images/Artist-Popular-Songs/without-me.jpeg';
+import MockingBird from '../../../images/Artist-Popular-Songs/mocking-bird.jpg';
+import TheRealSlimShady from '../../../images/Artist-Popular-Songs/slim-shady.jpeg';
+import LoseYourself from '../../../images/Artist-Popular-Songs/lose-yourself.jpeg';
+import Godzila from '../../../images/Artist-Popular-Songs/Godzila.jpeg';
 
 
 

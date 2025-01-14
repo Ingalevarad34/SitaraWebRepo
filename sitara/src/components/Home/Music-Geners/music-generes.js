@@ -1,8 +1,8 @@
 import React from "react";
-import RapTracks from '../../../images/rap-tracks.jpeg';
-import PopTracks from '../../../images/pop-tracks.jpeg';
-import RockTrcks from '../../../images/rock-tracks.jpeg';
-import ClassicTracks from '../../../images/classic-tracks.jpeg';
+import RapTracks from '../../../images/Music-Genres/rap-tracks.jpeg';
+import PopTracks from '../../../images/Music-Genres/pop-tracks.jpeg';
+import RockTrcks from '../../../images/Music-Genres/rock-tracks.jpeg';
+import ClassicTracks from '../../../images/Music-Genres/classic-tracks.jpeg';
 import './music-generes.css';
 
 

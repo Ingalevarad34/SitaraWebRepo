@@ -1,10 +1,10 @@
 import React from 'react'
 import './mood-playlist.css';
-import SadPlaylist from '../../../images/sad-songs.png';
-import ChillPlaylist from '../../../images/chill-songs.png';
-import WorkOutPlaylist from '../../../images/work-songs.png';
-import LovePlaylist from '../../../images/love-songs.png';
-import HappyPlayllist from '../../../images/happy-songs.png';
+import SadPlaylist from '../../../images/Mood-Playlist/sad-songs.png';
+import ChillPlaylist from '../../../images/Mood-Playlist/chill-songs.png';
+import WorkOutPlaylist from '../../../images/Mood-Playlist/work-songs.png';
+import LovePlaylist from '../../../images/Mood-Playlist/love-songs.png';
+import HappyPlayllist from '../../../images/Mood-Playlist/happy-songs.png';
 
 
 function MoodPlaylist() {

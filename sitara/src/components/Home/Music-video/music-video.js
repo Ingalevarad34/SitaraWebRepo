@@ -1,12 +1,12 @@
 
 import React from 'react';
 import './music-video.css';
-import Gossip from '../../../images/goosip.jpeg';
-import ShapeOfYou from '../../../images/shape-of-you.jpeg';
-import SomeOneLikeYou from '../../../images/someone-like-you.jpeg';
-import ShakeItOff from '../../../images/shake-it-off.jpeg';
-import NewRules from '../../../images/new-rules.jpeg';
-import WakaWaka from '../../../images/waka-waka.png';
+import Gossip from '../../../images/Music-Video/goosip.jpeg';
+import ShapeOfYou from '../../../images/Music-Video/shape-of-you.jpeg';
+import SomeOneLikeYou from '../../../images/Music-Video/someone-like-you.jpeg';
+import ShakeItOff from '../../../images/Music-Video/shake-it-off.jpeg';
+import NewRules from '../../../images/Music-Video/new-rules.jpeg';
+import WakaWaka from '../../../images/Music-Video/waka-waka.png';
 
 
 function MusicVideo() {

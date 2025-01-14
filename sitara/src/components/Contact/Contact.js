@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPhone, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
-import GoogleLogo from '../../images/google-logo.png';
+import GoogleLogo from '../../images/Contacts/google-logo.png';
 
 function Contact() {
     const [isSignUp, setIsSignUp] = useState(true);

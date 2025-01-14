@@ -1,10 +1,10 @@
 import React from 'react'
 import './Artist-Playlist.css'
-import FullCollection from '../../../images/full-collection.png';
-import BestOfEminem from '../../../images/best-of-eminem.png';
-import OldSongs from '../../../images/old-songs.png';
-import FansFavourite from '../../../images/fans-favorite.png';
-import NewRelease from '../../../images/new-relese.png';
+import FullCollection from '../../../images/Artists-Playlist/full-collection.png';
+import BestOfEminem from '../../../images/Artists-Playlist/best-of-eminem.png';
+import OldSongs from '../../../images/Artists-Playlist/old-songs.png';
+import FansFavourite from '../../../images/Artists-Playlist/fans-favorite.png';
+import NewRelease from '../../../images/Artists-Playlist/new-relese.png';
 
 
 function ArtistPlaylist() {

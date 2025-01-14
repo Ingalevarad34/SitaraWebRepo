@@ -3,13 +3,13 @@ import './TrendingSongs.css'; // Import custom styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import Softcore from '../../../images/softcore.jpeg';
-import Skyfall from '../../../images/skyfall.png';
-import Greedy from '../../../images/greedy.png';
-import Lovin from '../../../images/lovin-on-me.png';
-import Pain from '../../../images/pain-the-town-red.png';
-import Dancin from '../../../images/dancin-on-night.jpeg';
-import Water from '../../../images/water.png';
+import Softcore from '../../../images/Trending-Songs/softcore.jpeg';
+import Skyfall from '../../../images/Trending-Songs/skyfall.png';
+import Greedy from '../../../images/Trending-Songs/greedy.png';
+import Lovin from '../../../images/Trending-Songs/lovin-on-me.png';
+import Pain from '../../../images/Trending-Songs/pain-the-town-red.png';
+import Dancin from '../../../images/Trending-Songs/dancin-on-night.jpeg';
+import Water from '../../../images/Trending-Songs/water.png';
 
 const TrendingSongs = () => {
   const songs = [

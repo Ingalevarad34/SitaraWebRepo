@@ -1,9 +1,9 @@
 import React from 'react'
-import whatever_it_takes from '../../../images/imagine-dragons.png';
-import skyllfall from '../../../images/skyfall.png';
-import superman from '../../../images/eminem.jpeg';
-import softcore from '../../../images/softcore.jpeg';
-import lonilest from '../../../images/loneliest.jpeg';
+import whatever_it_takes from '../../../images/Weekly-top-songs/imagine-dragons.png';
+import skyllfall from '../../../images/Weekly-top-songs/skyfall.png';
+import superman from '../../../images/Weekly-top-songs/superman.jpeg';
+import softcore from '../../../images/Weekly-top-songs/softcore.jpeg';
+import lonilest from '../../../images/Weekly-top-songs/loneliest.jpeg';
 import './topSongs.css';
 
 

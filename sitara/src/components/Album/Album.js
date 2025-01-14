@@ -1,30 +1,30 @@
 import React from 'react';
 import './Album.css';
 import Header from '../Header/Header.js';
-import AlbumTopImg from '../../images/trending-music.png';
+import AlbumTopImg from '../../images/Trending-Songs/trending-music.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart,faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
-import Softcore from '../../images/softcore.jpeg';
-import Skyfall from '../../images/skyfall.png';
-import Greedy from '../../images/greedy.png';
-import Lovin from '../../images/lovin-on-me.png';
-import Pain from '../../images/pain-the-town-red.png';
-import Dancin from '../../images/dancin-on-night.jpeg';
-import Water from '../../images/water.png';
-import PushYourLimit from '../../images/push-your-limits.jpeg';
-import Houdini from '../../images/houdini.jpeg';
-import Lala from '../../images/lala.jpeg';
-import IWannaBeYours from '../../images/i-wanna-be-yours.jpeg';
-import Paradise from '../../images/paradise.jpeg';
-import AsItWas from '../../images/as-it-was.jpeg';
-import AnotherLove from '../../images/another-love.png';
-import DayLight from '../../images/daylight.png';
-import Beggin from '../../images/beggin.jpeg';
-import WhatWasIMadeFor from '../../images/what-was-i-made-for.png';
-import DaddyIssues from '../../images/daddy-issue.jpeg';
-import RollingInTheDeep from '../../images/rolling-in-the-deep.png';
-import OneShort from '../../images/one-shot.jpeg';
+import Softcore from '../../images/Trending-Songs/softcore.jpeg'
+import Skyfall from '../../images/Trending-Songs/skyfall.png';
+import Greedy from '../../images/Trending-Songs/greedy.png';
+import Lovin from '../../images/Trending-Songs/lovin-on-me.png';
+import Pain from '../../images/Trending-Songs/pain-the-town-red.png';
+import Dancin from '../../images/Trending-Songs/dancin-on-night.jpeg';
+import Water from '../../images/Trending-Songs//water.png';
+import PushYourLimit from '../../images/Trending-Songs/push-your-limits.jpeg';
+import Houdini from '../../images/Trending-Songs/houdini.jpeg';
+import Lala from '../../images/Trending-Songs/lala.jpeg';
+import IWannaBeYours from '../../images/Trending-Songs/i-wanna-be-yours.jpeg';
+import Paradise from '../../images/Trending-Songs/paradise.jpeg';
+import AsItWas from '../../images/Trending-Songs/as-it-was.jpeg';
+import AnotherLove from '../../images/Trending-Songs/another-love.png';
+import DayLight from '../../images/Trending-Songs/daylight.png';
+import Beggin from '../../images/Trending-Songs/beggin.jpeg';
+import WhatWasIMadeFor from '../../images/Trending-Songs/what-was-i-made-for.png';
+import DaddyIssues from '../../images/Trending-Songs/daddy-issue.jpeg';
+import RollingInTheDeep from '../../images/Trending-Songs/rolling-in-the-deep.png';
+import OneShort from '../../images/Trending-Songs/one-shot.jpeg';
 
 const songs = [
     {

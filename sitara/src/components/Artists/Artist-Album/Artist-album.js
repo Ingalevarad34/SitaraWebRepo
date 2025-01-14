@@ -1,10 +1,10 @@
 import React from 'react'
 import './Artist-album.css';
-import Superman from '../../../images/superman.jpeg';
-import Encore from '../../../images/encore.jpeg';
-import MusicToBeMurdered from '../../../images/music-to-be-murdered.jpeg';
-import TheSlimShady from '../../../images/eminem-slim-shady.jpeg';
-import Recovery from '../../../images/recovery.jpeg';
+import Superman from '../../../images/Artists-Album/The-Eminem-Show.jpeg';
+import Encore from '../../../images/Artists-Album/encore.jpeg';
+import MusicToBeMurdered from '../../../images/Artists-Album/music-to-be-murdered.jpeg';
+import TheSlimShady from '../../../images/Artists-Album/eminem-slim-shady.jpeg';
+import Recovery from '../../../images/Artists-Album/recovery.jpeg';
 
 
 

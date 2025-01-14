@@ -1,10 +1,10 @@
 import React from 'react'
 import './SingleSong.css';
-import LaceIt from '../../../images/lace-it.jpeg';
-import Realesc from '../../../images/realesc.jpeg';
-import FromTheD2Th from '../../../images/eminem-snoop.png';
-import KillShort from '../../../images/killshot.jpeg';
-import NineOneOne from '../../../images/911.jpeg';
+import LaceIt from '../../../images/Single-Songs/lace-it.jpeg';
+import Realesc from '../../../images/Single-Songs/realesc.jpeg';
+import FromTheD2Th from '../../../images/Single-Songs/from-the-d2.png';
+import KillShort from '../../../images/Single-Songs/killshot.jpeg';
+import NineOneOne from '../../../images/Single-Songs/911.jpeg';
 
 
 

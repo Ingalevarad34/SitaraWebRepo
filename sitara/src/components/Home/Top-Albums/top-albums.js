@@ -1,10 +1,10 @@
 import React from 'react'
 import './top-albums.css'
-import AdeleTwentyOne from '../../../images/adele-21.png';
-import Scorpion from '../../../images/scorpion.jpeg';
-import HarrysHouse from '../../../images/harrys-house.png';
-import BornToDie from '../../../images/born-to-die.png';
-import BeautyBehindMadness from '../../../images/beauty-behind-the-madness.png';
+import AdeleTwentyOne from '../../../images/Top-Albums/adele-21.png';
+import Scorpion from '../../../images/Top-Albums/scorpion.jpeg';
+import HarrysHouse from '../../../images/Top-Albums/harrys-house.png';
+import BornToDie from '../../../images/Top-Albums/born-to-die.png';
+import BeautyBehindMadness from '../../../images/Top-Albums/beauty-behind-the-madness.png';
 
 
 

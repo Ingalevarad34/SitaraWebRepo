@@ -1,10 +1,10 @@
 import React from 'react';
-import eminem from '../../../images/eminem.jpeg';
-import weekend from '../../../images/weekend.jpeg';
-import Adele from '../../../images/adele.jpeg';
-import lanaDeRey from '../../../images/lana-del-ray.jpeg';
-import harryStyles from '../../../images/harry-styles.jpeg';
-import billieElish from '../../../images/belli-elish.jpeg';
+import eminem from '../../../images/Popular-Artists/eminem.jpeg';
+import weekend from '../../../images/Popular-Artists/weekend.jpeg';
+import Adele from '../../../images/Popular-Artists/adele.jpeg';
+import lanaDeRey from '../../../images/Popular-Artists/lana-del-ray.jpeg';
+import harryStyles from '../../../images/Popular-Artists/harry-styles.jpeg';
+import billieElish from '../../../images/Popular-Artists/belli-elish.jpeg';
 import './popular-artist.css';
 
 function PopularArtists() {
