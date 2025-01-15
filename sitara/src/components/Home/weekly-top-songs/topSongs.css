@@ -1,23 +1,85 @@
 .lato-regular {
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .text-pink {
-    color: #ee10b0;
-  }
-  
-  /* Horizontal scroll styling for smaller screens */
-  .horizontal-scroll {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 1rem; /* Space between cards */
-    padding-bottom: 1rem; /* Add padding for better visuals */
-  }
-  
-  .horizontal-scroll .card {
-    flex: 0 0 auto; /* Ensure the cards don’t shrink */
-    width: 150px; /* Fixed width for consistent layout */
-  }
-  
+  font-family: "Lato", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.text-pink {
+  color: #ee10b0;
+}
+
+/* Horizontal scroll styling for smaller screens */
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  gap: 1rem;
+  /* Space between cards */
+  padding-bottom: 1rem;
+  /* Add padding for better visuals */
+}
+
+.horizontal-scroll .card {
+  flex: 0 0 auto;
+  /* Ensure the cards don’t shrink */
+  width: 150px;
+  /* Fixed width for consistent layout */
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #1c1c1c;
+  /* Dark background to match the logo's background */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(216, 0, 255, 0.7);
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff007f, #8e44ad) 1;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff007f, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.card:hover .card-title {
+  text-shadow: 0 0 15px #ff007f, 0 0 25px #8e44ad;
+  transform: scale(1.1);
+}
+
+.card-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* .card:hover .card-text {
+  /* color: #ffb3ff;
+} */
