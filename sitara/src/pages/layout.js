@@ -51,7 +51,7 @@ function Layout() {
           </Link>
           </MenuItem>
           <MenuItem icon={<FaMusic />}>
-            <Link className="" to="/albums">
+            <Link className="" to="/">
               Albums
             </Link>
           </MenuItem>

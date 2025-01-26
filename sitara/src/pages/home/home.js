@@ -11,23 +11,24 @@ import TrendingSongs from "../../components/Home/Trending-songs/TrendingSongs";
 import TopSongs from "../../components/Home/weekly-top-songs/topSongs";
 
 function Home() {
+
   return (
-  
-      <div className="">
-        <IntroSection />
-        <TopSongs />
-        <NewReleseSongs />
-        <TrendingSongs />
-        <PopularArtists />
-        <MusicVideo />
-        <TopAlbums />
-        <MoodPlaylist />
-        <Contact />
-        <Footer />
-        
-        
-      </div>
-    
+
+    <div className="">
+      <IntroSection />
+      <TopSongs />
+      <NewReleseSongs />
+      <TrendingSongs />
+      <PopularArtists />
+      <MusicVideo />
+      <TopAlbums />
+      <MoodPlaylist />
+      <Contact />
+      <Footer />
+
+
+    </div>
+
   );
 }
 

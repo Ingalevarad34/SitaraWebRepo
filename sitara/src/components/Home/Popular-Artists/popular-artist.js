@@ -1,90 +1,110 @@
 import React from 'react';
-import eminem from '../../../images/Popular-Artists/eminem.jpeg';
-import weekend from '../../../images/Popular-Artists/weekend.jpeg';
-import Adele from '../../../images/Popular-Artists/adele.jpeg';
-import lanaDeRey from '../../../images/Popular-Artists/lana-del-ray.jpeg';
-import harryStyles from '../../../images/Popular-Artists/harry-styles.jpeg';
-import billieElish from '../../../images/Popular-Artists/belli-elish.jpeg';
 import './popular-artist.css';
+import axios from 'axios';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PopularArtists() {
+    const [elm, setElm] = useState(6);
+    const [data, setData] = useState(null); // Start with `null` to indicate loading state
 
-    const artists = [
-        { name: 'Eminem', image: eminem },
-        { name: 'The Weeknd', image: weekend },
-        { name: 'Adele', image: Adele },
-        { name: 'Lana Del Rey', image: lanaDeRey },
-        { name: 'Harry Styles', image: harryStyles },
-        { name: 'Billie Eilish', image: billieElish },
-    ];
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:8080/artist/getAllArtist");
+                setData(response.data);
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            } finally {
 
+            }
+        };
+
+        fetchData();
+    }, []);
+    console.log("Data is:", data?.[0]);
+
+
+    const navigate = useNavigate();
+    const handleIndex = (index) => {
+        handleClick(index);
+    }
+    const handleClick = (index) => {
+        navigate("/albums", { state: { message: index } });
+    };
     return (
-        <div className=" lato-regular container mt-5">
-            <h2 className='text-white'style={{ fontWeight : "bolder"}} >
-                Popular <span className="text-pink">Artists</span>
-            </h2>
-            <div className="d-flex  align-items-center flex-wrap gap-3 mt-4">
-                {artists.map((artist, index) => (
-                    <div key={index} className="text-center">
-                        <div
-                            className="rounded-circle overflow-hidden"
-                            style={{
-                                width: "170px",
-                                height: "170px",
-                                margin: "0 auto",
-                                // border: "2px solid white",
-                            }}
-                        >
-                            <img
-                                src={artist.image}
-                                alt={artist.name}
-                                className="img-fluid"
-                                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                            />
-                        </div>
-                        <p className="mt-2 text-white">{artist.name}</p>
+        <>
+            {data && data.length > 0 ? (
+                <div className=" lato-regular container mt-5">
+                    <h2 className='text-white' style={{ fontWeight: "bolder" }} >
+                        Popular <span className="text-pink">Artists</span>
+                    </h2>
+                    <div className="d-flex  align-items-center flex-wrap gap-3 mt-4">
+                        {data.slice(0, elm).map((artist, index) => (
+                            <div key={index} className="text-center">
+                                <div
+                                    className="rounded-circle overflow-hidden"
+                                    style={{
+                                        width: "170px",
+                                        height: "170px",
+                                        margin: "0 auto",
+                                        // border: "2px solid white",
+                                    }}
+                                >
+                                    <img
+                                        onClick={()=>handleIndex(data[index])}
+                                        src={artist.imageUrl}
+                                        alt={artist.artistName}
+                                        className="img-fluid"
+                                        style={{ width: "100%", height: "100%", objectFit: "cover", cursor: "pointer" }}
+                                    />
+                                </div>
+                                <p className="mt-2 text-white">{artist.artistName}</p>
+                            </div>
+                        ))}
+
+                        {elm === 6 ? <div className="text-center">
+                            <div
+                                onClick={() => setElm(data.length)}
+                                className="rounded-circle d-flex justify-content-center align-items-center mt-2"
+                                style={{
+                                    width: "60px",
+                                    height: "60px",
+                                    backgroundColor: "#333",
+                                    color: "white",
+                                    fontSize: "30px",
+                                    fontWeight: "bold",
+                                    marginLeft: "50px",
+                                    cursor: "pointer"
+                                }}
+                            >
+                                +
+                            </div>
+                            <p className="mt-2 text-white ms-5">View All</p>
+                        </div> : <div className="text-center">
+                            <div
+                                onClick={() => setElm(6)}
+                                className="rounded-circle d-flex justify-content-center align-items-center mt-2"
+                                style={{
+                                    width: "60px",
+                                    height: "60px",
+                                    backgroundColor: "#333",
+                                    color: "white",
+                                    fontSize: "30px",
+                                    fontWeight: "bold",
+                                    marginLeft: "50px",
+                                    cursor: "pointer"
+                                }}
+                            >
+                                -
+                            </div>
+                            <p className="mt-2 text-white ms-5">View Less</p>
+                        </div>}
+
                     </div>
-                ))}
-
-
-                <div className="text-center">
-                    <div
-                        className="rounded-circle d-flex justify-content-center align-items-center mt-2"
-                        style={{
-                            width: "60px",
-                            height: "60px",
-                            backgroundColor: "#333",
-                            color: "white",
-                            fontSize: "30px",
-                            fontWeight: "bold",
-                            marginLeft: "50px"
-                        }}
-                    >
-                        +
-                    </div>
-                    <p className="mt-2 text-white ms-5">View All</p>
-                </div>
-
-
-
-                {/* <div className="col-md-2 col-sm-6 mb-4 d-flex align-items-center justify-content-center">
-              <button
-                className="btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  fontSize: "14px",
-                  color: "#fff",
-                }}
-              >
-                <span className="fs-4">+</span>
-                View All
-              </button>
-            </div> */}
-
-
-            </div>
-        </div>
+                </div>) : <div></div>
+            }
+        </>
     );
 };
 

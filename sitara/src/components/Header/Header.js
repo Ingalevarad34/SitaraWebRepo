@@ -13,7 +13,7 @@ function Header() {
           <span className="input-group-text bg-color border-0">
             <i class="fa-solid fa-magnifying-glass fa-flip-horizontal" style={{ color: '#ffffff' }}></i>
           </span>
-          <input className="form-control w-25 bg-color border-0" type="search" placeholder="Search For Music, Artists,..." />
+          <input className="form-control w-50 bg-color border-0" type="search" placeholder="Search For Music, Artists,..." />
         </div>
         <button
           className="navbar-toggler"
@@ -28,26 +28,26 @@ function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item ms-3 lato-bold" >
+            <li className="nav-item ms-5 lato-bold" >
               <Link className="nav-link" style={{ color: 'white' }} to="/artists">
                 About Us
               </Link>
             </li>
-            <li className="nav-item ms-3 lato-bold">
-              <Link className="nav-link" style={{ color: 'white' }} to="/albums">
+            <li className="nav-item ms-5 lato-bold">
+              <Link className="nav-link" style={{ color: 'white' }} to="/">
                 Contact
               </Link>
             </li>
-            <li className="nav-item ms-3 me-5 lato-bold">
+            <li className="nav-item ms-5 me-5 lato-bold">
               <Link className="nav-link" style={{ color: 'white' }} to="/discover">
                 Premium
               </Link>
             </li>
           </ul>
-          <div className="d-flex nav-btn">
+          {/* <div className="d-flex nav-btn">
             <button className="btn btn-outline-light me-5 lato-regular  border-pink" style={{ width: '40%' }}>Login</button>
             <button className="btn btn-outline-light me-2 lato-regular  border-pink" style={{ width: '40%' }}>Sign Up</button>
-          </div>
+          </div> */}
         </div>
       </nav>
       {/* NavBar end */}
