@@ -32,13 +32,24 @@ function PopularArtists() {
     const handleClick = (index) => {
         navigate("/albums", { state: { message: index } });
     };
+
+    //To get the browser rout path
+    const path = window.location.pathname;
+    useEffect(() => {
+        const path = window.location.pathname;
+        console.log('Current Path:', path);
+    }, []);
     return (
         <>
             {data && data.length > 0 ? (
                 <div className=" lato-regular container mt-5">
-                    <h2 className='text-white' style={{ fontWeight: "bolder" }} >
-                        Popular <span className="text-pink">Artists</span>
-                    </h2>
+                    {
+                        path === '/home' ? (<h2 className='text-white' style={{ fontWeight: "bolder" }} >
+                            Popular <span className="text-pink">Artists</span>
+                        </h2>) : <h2 className='text-white' style={{ fontWeight: "bolder" }} >
+                            Other <span className="text-pink">Artists</span>
+                        </h2>
+                    }
                     <div className="d-flex  align-items-center flex-wrap gap-3 mt-4">
                         {data.slice(0, elm).map((artist, index) => (
                             <div key={index} className="text-center">
@@ -52,7 +63,7 @@ function PopularArtists() {
                                     }}
                                 >
                                     <img
-                                        onClick={()=>handleIndex(data[index])}
+                                        onClick={() => handleIndex(data[index])}
                                         src={artist.imageUrl}
                                         alt={artist.artistName}
                                         className="img-fluid"

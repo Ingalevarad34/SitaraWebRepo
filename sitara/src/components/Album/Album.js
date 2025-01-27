@@ -4,6 +4,7 @@ import Header from '../Header/Header.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faCirclePlay, faPlay, faPause, faTimes, faStepForward, faStepBackward, faShuffle, faVolumeUp, faVolumeDown } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from "react-router-dom";
+import PopularArtists from '../Home/Popular-Artists/popular-artist.js';
 
 function Album() {
     const location = useLocation();
@@ -107,6 +108,13 @@ function Album() {
         playSong(0);
     };
 
+    // Function to format seconds as minutes:seconds
+    const formatTime = (seconds) => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    };
+
     return (
         <div className="container-fluid text-white" style={{ background: 'linear-gradient(to right, #1472dc, #2a526c)' }}>
             <Header />
@@ -115,7 +123,7 @@ function Album() {
                     <img src={message.imageUrl} alt="Trending Music" className="img-fluid rounded albumTopImg" style={{ marginLeft: "50px" }} />
                 </div>
                 <div className="col-md-9">
-                    <h1 className="display-5">Trending songs <span className="text-danger">mix</span></h1>
+                    <h1 className="display-5">{message.artistName} <span className="text-danger">mix</span></h1>
                     <p className="text-light">{message.smallDesc}...</p>
                     <div className="d-flex align-items-center mb-3">
                         <span>{artistAlbumArray.length} songs</span>
@@ -165,7 +173,6 @@ function Album() {
                 </div>
             </div>
 
-
             {/* Modern Popup Modal */}
             {showModal && selectedSong && (
                 <div className="modal show d-block" style={{ background: "rgba(0, 0, 0, 0.7)" }}>
@@ -176,16 +183,18 @@ function Album() {
                                 <button className="btn-close btn-light" onClick={closeModal}></button>
                             </div>
                             <div className="modal-body">
-                                <img src={selectedSong.imageUrl} alt={selectedSong.musicName} className="img-fluid rounded mb-3" style={{ width: "200px", height: "200px" }} />
+                                <img src={selectedSong.imageUrl} alt={selectedSong.musicName} className=" rounded mb-3" style={{ width: "300px", height: "200px", backgroundSize: "cover" }} />
 
-                                {/* Song Progress Bar */}
-                                <div className="d-flex align-items-center justify-content-center">
+                                {/* Song Progress Bar with Time Duration */}
+                                <div className="d-flex align-items-center justify-content-center mb-2">
+                                    <span>{formatTime(progress * duration / 100)}</span>
                                     <input
                                         type="range"
                                         value={progress}
                                         onChange={handleSeek}
-                                        className="form-range w-75 my-2"
+                                        className="form-range w-75 mx-2"
                                     />
+                                    <span>{formatTime(duration)}</span>
                                 </div>
 
                                 {/* Controls Row: Shuffle, Previous, Play/Pause, Next & Volume */}
@@ -225,6 +234,7 @@ function Album() {
                 </div>
             )}
 
+            <PopularArtists />
         </div>
     );
 }
