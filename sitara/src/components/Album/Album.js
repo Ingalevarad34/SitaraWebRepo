@@ -11,6 +11,8 @@ function Album() {
     const { message } = location.state || {};
     const artistAlbumArray = JSON.parse(message.artistAlbum);
 
+    
+
     const [currentAudio, setCurrentAudio] = useState(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [selectedSong, setSelectedSong] = useState(null);
@@ -201,7 +203,7 @@ function Album() {
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className="d-flex">
                                         <button className="btn btn-light mx-2" onClick={handleShuffle}>
-                                            <FontAwesomeIcon icon={faShuffle} style={{ color: isShuffle ? "green" : "white" }} />
+                                            <FontAwesomeIcon icon={faShuffle} style={{ color: isShuffle ? "blue" : "black" }} />
                                         </button>
                                         <button className="btn btn-light mx-2" onClick={handlePrevSong}>
                                             <FontAwesomeIcon icon={faStepBackward} />

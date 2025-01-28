@@ -22,7 +22,7 @@ function PopularArtists() {
 
         fetchData();
     }, []);
-    console.log("Data is:", data?.[0]);
+    // console.log("Data is:", data?.[0]);
 
 
     const navigate = useNavigate();
