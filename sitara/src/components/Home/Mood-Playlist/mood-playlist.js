@@ -235,7 +235,7 @@ function MoodPlaylist() {
 
                     <div className="d-flex align-items-center justify-content-center w-100 mt-2">
                       <button className="btn btn-light mx-2" onClick={handleLoop}>
-                        <FontAwesomeIcon icon={faRedo} color={isLoop ? 'green' : 'white'} />
+                        <FontAwesomeIcon icon={faRedo} color={isLoop ? 'green' : 'black'} />
                       </button>
                       <button className="btn btn-light mx-2" onClick={handlePrevSong}><FontAwesomeIcon icon={faStepBackward} /></button>
                       <button className="btn btn-light mx-2" onClick={handlePlayPause}><FontAwesomeIcon icon={isPlaying ? faPause : faPlay} /></button>
