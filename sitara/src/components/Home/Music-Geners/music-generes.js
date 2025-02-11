@@ -21,7 +21,7 @@ function MusicGenres() {
 
     fetchData();
   }, []);
-  console.log("Data is:", data);
+  // console.log("Data is:", data);
 
 
 

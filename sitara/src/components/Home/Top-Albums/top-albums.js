@@ -1,130 +1,107 @@
-import React from 'react'
-import './top-albums.css'
-import AdeleTwentyOne from '../../../images/Top-Albums/adele-21.png';
-import Scorpion from '../../../images/Top-Albums/scorpion.jpeg';
-import HarrysHouse from '../../../images/Top-Albums/harrys-house.png';
-import BornToDie from '../../../images/Top-Albums/born-to-die.png';
-import BeautyBehindMadness from '../../../images/Top-Albums/beauty-behind-the-madness.png';
-
-
+import React, { useState, useEffect } from "react";
+import "./top-albums.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function TopAlbums() {
-    
- const songs = [
-        {
-            title: "Adele 21",
-            artist: "Adele",
-            image: AdeleTwentyOne
-        },
-        {
-            title: "Scorpion",
-            artist: "Drake",
-            image: Scorpion
-        },
-        {
-            title: "Harry's House",
-            artist: "Harry Styles",
-            image: HarrysHouse
-        },
-        {
-            title: "Born To Die",
-            artist: "Lana Dey Ray",
-            image: BornToDie
-        },
-        {
-            title: "Beauty Behind the...",
-            artist: "The Weekend",
-            image: BeautyBehindMadness
-        },
-    ];
+  const [elm, setElm] = useState(5);
+  const [data, setData] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/artist/getAllArtist");
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    return (
-        <div className="lato-regular container mt-5">
+    fetchData();
+  }, []);
+
+  // Function to shuffle array
+  // const getRandomItems = (arr, numItems) => {
+  //   if (!arr) return [];
+  //   return arr
+  //     .map(item => ({ item, sort: Math.random() })) // Assign random values
+  //     .sort((a, b) => a.sort - b.sort) // Sort randomly
+  //     .slice(0, numItems) // Take the first `numItems`
+  //     .map(({ item }) => item); // Extract the actual items
+  // };
+
+  const navigate = useNavigate();
+    const handleIndex = (index) => {
+        handleClick(index);
+    }
+    const handleClick = (index) => {
+        navigate("/albums", { state: { message: index } });
+    };
+
+    // //To get the browser rout path
+    // const path = window.location.pathname;
+    // useEffect(() => {
+    //     const path = window.location.pathname;
+    //     console.log('Current Path:', path);
+    // }, []);
+
+  return (
+    <>
+      {data && data.length > 0 ? (
+        <div className="lato-regular container mt-5" style={{cursor:"pointer"}}>
           <h3 className="text-white fs-2" style={{ fontWeight: "bolder" }}>
             Top <span className="text-pink">Albums</span>
           </h3>
+
           {/* For larger screens: Grid layout */}
           <div className="row d-none d-sm-flex mt-4">
-            {songs.map((song, index) => (
+            {data.slice(0, elm).map((song, index) => (
               <div key={index} className="col-md-2 col-sm-6 mb-4">
                 <div className="card bg-dark text-light h-100">
-                  <img
-                    src={song.image}
+                  <img  onClick={() => handleIndex(data[index])}
+                    src={song.imageUrl}
                     className="card-img-top p-2"
-                    alt={song.title}
-                    style={{ borderRadius: "10px" }}
+                    alt={song.artistName}
+                    style={{ borderRadius: "10px", height: "22vh" }}
                   />
                   <div className="card-body text-center">
                     <p className="card-title fw-bold" style={{ fontSize: "20px" }}>
-                      {song.title}
+                      {song.artistName}
                     </p>
                     <p className="card-text fs-7" style={{ fontWeight: "300" }}>
-                      {song.artist}
+                      {song.smallDesc}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
+
             {/* View All Button */}
-            <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
-              <button
-                className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
-                style={{
-                  width: "60px",
-                  height: "60px",
-                  fontSize: "30px",
-                  color: "#fff",
-                  fontWeight: "bold"
-                }}
-              >
-                <span>+</span>
-    
-              </button>
-              <div className='text-white mt-2' style={{ fontSize: "14px" }}>View All</div>
-            </div>
-          </div>
-          {/* For smaller screens: Horizontal scroll */}
-          <div className="d-sm-none mt-4 horizontal-scroll">
-            {songs.map((song, index) => (
-              <div key={index} className="card bg-dark text-light me-3">
-                <img
-                  src={song.image}
-                  className="card-img-top p-2"
-                  alt={song.title}
-                  style={{ borderRadius: "10px" }}
-                />
-                <div className="card-body text-center">
-                  <p className="card-title fw-bold" style={{ fontSize: "20px" }}>
-                    {song.title}
-                  </p>
-                  <p className="card-text fs-7" style={{ fontWeight: "300" }}>
-                    {song.artist}
-                  </p>
+            {elm === 5 ? (
+              <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
+                <button
+                  onClick={() => setElm(12)}
+                  className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    fontSize: "30px",
+                    color: "#fff",
+                    fontWeight: "bold"
+                  }}
+                >
+                  <span>+</span>
+                </button>
+                <div className="text-white mt-2" style={{ fontSize: "14px" }}>
+                  View All
                 </div>
               </div>
-            ))}
-            {/* View All Button */}
-            <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
-              <button
-                className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
-                style={{
-                  width: "60px",
-                  height: "60px",
-                  fontSize: "30px",
-                  color: "#fff",
-                  fontWeight: "bold"
-                }}
-              >
-                <span>+</span>
-    
-              </button>
-              <div className='text-white mt-2' style={{ fontSize: "14px" }}>View All</div>
-            </div>
-            
+            ) : null}
           </div>
         </div>
-      );
+      ) : null}
+    </>
+  );
 }
 
 export default TopAlbums;

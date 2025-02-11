@@ -40,7 +40,7 @@ function Layout() {
         <Menu>
           {/* Menu Section */}
           <p className="section-title">Menu</p>
-          <MenuItem icon={<FaHome />} className="active-menu-item">
+          <MenuItem icon={<FaHome />} className="">
             <Link className="" to="/">
               Home
             </Link>
