@@ -7,12 +7,12 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDRf8jVD2qSBagS7RRw0ER0N70j-tHiC5E",
-  authDomain: "sitara-85860.firebaseapp.com",
-  projectId: "sitara-85860",
-  storageBucket: "sitara-85860.firebasestorage.app",
-  messagingSenderId: "797569159084",
-  appId: "1:797569159084:web:facf39214d5d7295fcb409"
+  apiKey: "AIzaSyB1W_IzOfY4utWvPcTIZpMVLAZGCWjPkuk",
+  authDomain: "sitaraweb-28796.firebaseapp.com",
+  projectId: "sitaraweb-28796",
+  storageBucket: "sitaraweb-28796.firebasestorage.app",
+  messagingSenderId: "824048775861",
+  appId: "1:824048775861:web:95742db742f2b0e92584fc"
 };
 
 // Initialize Firebase
