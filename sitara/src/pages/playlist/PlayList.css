@@ -1,0 +1,90 @@
+/* Playlist Container */
+.playlist-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #121212;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.playlist-title {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table Styling */
+.playlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.playlist-row {
+    display: grid;
+    grid-template-columns: 40px auto 60px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+
+/* Track Number */
+.track-number {
+    text-align: center;
+    font-weight: bold;
+    color: #bbb;
+}
+
+/* Song Details */
+.song-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Song Image */
+.song-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+/* Song Title */
+.song-title {
+    font-weight: bold;
+}
+
+/* Play Button */
+.play-btn {
+    background: #1db954;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.play-btn:hover {
+    background: #1aa34a;
+}
+
+/* Song Duration */
+.song-duration {
+    text-align: center;
+    font-weight: bold;
+    color: #bbb;
+}
+
+/* No Music Message */
+.no-music {
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    padding: 20px;
+}

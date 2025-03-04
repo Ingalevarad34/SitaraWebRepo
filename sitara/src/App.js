@@ -12,6 +12,7 @@ import "react-toastify/ReactToastify.css";
 import { useState, useEffect } from "react";
 import { auth } from "./components/FirebaseAuth/firebase.js";
 import Profile from "./components/FirebaseAuth/profile.js";
+import PlayList from "./pages/playlist/PlayList.js";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -46,6 +47,7 @@ function App() {
           <Route path="artists" element={<Artists />} />
           <Route path="discover" element={<Discover />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="playlist" element={<PlayList />} />
           <Route path="login" element={<Login />} />
         </Route>
       </Routes>

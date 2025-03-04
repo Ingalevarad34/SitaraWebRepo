@@ -25,7 +25,7 @@ function IntroSection() {
               Discover Now
             </button>
             <button className="btn btn-outline-light lato-regular border-color">
-              Create Playlist
+              Albums
             </button>
           </div>
         </div>

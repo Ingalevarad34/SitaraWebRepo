@@ -70,7 +70,9 @@ function Layout() {
           <p className="section-title">Playlist and favorite</p>
           <MenuItem icon={<FaHeart />}>Your Favorites</MenuItem>
           <MenuItem icon={<FaPlus />} className="blue-item">
-            Add Playlist
+          <Link className="blue-item" to="/playlist">
+            View PlayList
+          </Link>
           </MenuItem>
 
           {/* General Section */}
