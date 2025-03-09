@@ -16,7 +16,7 @@ function Header() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/allSongs/getAllSongs");
+        const response = await axios.get("http://localhost:5000/api/all-songs");
         setMusicData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -63,12 +63,12 @@ function Header() {
 
   const addToPlaylist = async (song) => {
     try {
-      const response = await axios.post("http://localhost:8080/playList/addAllPlayList", [song]); // Wrap song in an array
+      const response = await axios.post("http://localhost:5000/api/playList-songs", [song]); // Wrap song in an array
       console.log("Song added to playlist:", response.data);
     } catch (error) {
       console.error("Error adding song to playlist:", error);
     }
-  };  
+  };
 
   return (
     <>
@@ -99,7 +99,12 @@ function Header() {
                 <img src={currentSong.imageUrl} alt={currentSong.musicName} className="player-image" />
                 <div className="player-info">
                   <strong>{currentSong.musicName}</strong> - {currentSong.artistName}
-                  <button className="add-to-playlist-btn" onClick={() => addToPlaylist(currentSong)}>+</button>
+                  <i onClick={() => addToPlaylist(currentSong)} className="fa-solid fa-plus ms-4" style={{ cursor: "pointer" }} title="add to playlist">
+                    {
+                      console.log(currentSong)
+
+                    }
+                  </i>
                 </div>
                 <audio className="mt-2" ref={audioRef} controls>
                   <source src={currentSong.audioUrl} type="audio/mpeg" />

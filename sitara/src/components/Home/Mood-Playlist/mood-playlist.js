@@ -21,7 +21,7 @@ function MoodPlaylist() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/MoodPlaylist/getAllMoodPlaylist");
+        const response = await axios.get("http://localhost:5000/api/moodPlaylist-songs");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -146,7 +146,7 @@ function MoodPlaylist() {
           </h3>
           <div className="row d-none d-sm-flex mt-4">
             {data.slice(0, elm).map((playlist, index) => (
-              <div key={index} className="col-md-2 col-sm-6 mb-4" onClick={() => handleAlbumClick(playlist)}>
+              <div key={index} className="col-md-2 col-sm-6 mb-4" onClick={() => handleAlbumClick(playlist)} style={{cursor:"pointer"}}>
                 <div className="card bg-dark text-light h-100">
                   <img
                     src={playlist.imageUrl}

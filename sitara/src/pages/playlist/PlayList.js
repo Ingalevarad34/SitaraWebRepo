@@ -10,7 +10,7 @@ function PlayList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/playList/getAllPlayList");
+                const response = await axios.get("http://localhost:5000/api/playList-songs");
                 setData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -46,7 +46,7 @@ function PlayList() {
                                     <div>
                                         <span className="song-title">{item.musicName}</span>
                                         <br />
-                                        <button className="play-btn" onClick={() => playSong(item.audioUrl)}>
+                                        <button className="play-btn mt-2" onClick={() => playSong(item.audioUrl)}>
                                             {currentSong === item.audioUrl ? "⏸ Pause" : "▶ Play"}
                                         </button>
                                     </div>

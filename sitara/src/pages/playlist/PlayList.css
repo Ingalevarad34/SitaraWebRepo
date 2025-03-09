@@ -60,19 +60,39 @@
 
 /* Play Button */
 .play-btn {
-    background: #1db954;
-    color: #fff;
+    background: linear-gradient(145deg, #ff0080, #8000ff);
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 19px;
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.play-btn:hover {
-    background: #1aa34a;
-}
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5), 
+                -4px -4px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Hover Effect */
+  .play-btn:hover {
+    background: linear-gradient(145deg, #ff00a5, #5f00ff);
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.6), 
+                -4px -4px 10px rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+  }
+  
+  /* Click Effect */
+  .play-btn:active {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.1);
+    transform: scale(0.95);
+  }
+  
 
 /* Song Duration */
 .song-duration {

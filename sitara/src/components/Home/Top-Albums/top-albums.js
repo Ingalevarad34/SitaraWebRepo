@@ -10,7 +10,7 @@ function TopAlbums() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/artist/getAllArtist");
+        const response = await axios.get("http://localhost:5000/api/topAlbums-songs");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
