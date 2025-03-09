@@ -130,6 +130,25 @@ function Header() {
             onChange={handleSearch}
           />
         </div>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item ms-5 lato-bold">
+              <Link className="nav-link" style={{ color: "white" }} to="/artists">
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item ms-5 lato-bold">
+              <Link className="nav-link" style={{ color: "white" }} to="/">
+                Contact
+              </Link>
+            </li>
+            <li className="nav-item ms-5 me-5 lato-bold">
+              <Link className="nav-link" style={{ color: "white" }} to="/discover">
+                Premium
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       {loading && <p className="loading-text">Loading music data...</p>}
