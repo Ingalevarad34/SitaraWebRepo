@@ -1,0 +1,205 @@
+/* General Layout */
+.admin-container {
+    display: flex;
+    height: 100vh;
+    background: radial-gradient(circle, #0a0f1a, #091225);
+    color: white;
+}
+
+/* 🎭 Sidebar - 3D Animation */
+.admin-sidebar {
+    width: 260px;
+    background: linear-gradient(135deg, #121b32, #1c2b42);
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-sidebar:hover {
+    transform: scale(1.05);
+}
+
+.admin-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c9aff;
+}
+
+/* Sidebar Buttons */
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    text-align: left;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.admin-nav-link:hover,
+.admin-nav-link.active {
+    background: #2c9aff;
+    transform: translateX(10px);
+    box-shadow: 0px 0px 15px #2c9aff;
+}
+
+/* 🌟 Main Content - 3D Floating Card */
+.admin-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-card {
+    width: 650px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    box-shadow: 0px 5px 30px rgba(44, 154, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 50px rgba(44, 154, 255, 0.7);
+}
+
+/* Text Input - Glassmorphism */
+.admin-json-input {
+    width: 100%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: inset 0px 0px 10px rgba(44, 154, 255, 0.3);
+    outline: none;
+}
+
+/* 🚀 Post Button */
+.admin-post-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #2381d1, #2c9aff);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 5px 20px rgba(44, 154, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-post-button:hover {
+    background: #2c9aff;
+    transform: scale(1.05);
+}
+
+/* API Response Box */
+.admin-response {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    overflow-wrap: break-word;
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-response:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(44, 154, 255, 0.4);
+}
+
+
+/* 🔒 Admin Login Page */
+.admin-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle, #0a0f1a, #091225);
+    color: white;
+}
+
+.admin-login-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(44, 154, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.admin-login-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.admin-login-form button {
+    padding: 10px;
+    background: #2c9aff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-login-form button:hover {
+    background: #2381d1;
+}
+
+/* 🎭 Sidebar */
+.admin-sidebar {
+    width: 260px;
+    background: linear-gradient(135deg, #121b32, #1c2b42);
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 🚪 Logout Button */
+.admin-logout-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.admin-logout-btn:hover {
+    background: darkred;
+}

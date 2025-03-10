@@ -16,49 +16,55 @@ function TopAlbums() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
 
   // Function to shuffle array
-  // const getRandomItems = (arr, numItems) => {
-  //   if (!arr) return [];
-  //   return arr
-  //     .map(item => ({ item, sort: Math.random() })) // Assign random values
-  //     .sort((a, b) => a.sort - b.sort) // Sort randomly
-  //     .slice(0, numItems) // Take the first `numItems`
-  //     .map(({ item }) => item); // Extract the actual items
-  // };
+  const shuffleArray = (array) => {
+    if (!array) return [];
+    return [...array].sort(() => Math.random() - 0.5);
+  };
+
+  // Shuffle albums every minute
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setData((prevData) => shuffleArray(prevData));
+    }, 3600000); // 60000ms = 1 minute
+    return () => clearInterval(interval);
+  }, []);
 
   const navigate = useNavigate();
-    const handleIndex = (index) => {
-        handleClick(index);
-    }
-    const handleClick = (index) => {
-        navigate("/albums", { state: { message: index } });
-    };
-
-    // //To get the browser rout path
-    // const path = window.location.pathname;
-    // useEffect(() => {
-    //     const path = window.location.pathname;
-    //     console.log('Current Path:', path);
-    // }, []);
+  const handleIndex = (index) => {
+    handleClick(index);
+  };
+  const handleClick = (index) => {
+    navigate("/albums", { state: { message: index } });
+  };
 
   return (
     <>
       {data && data.length > 0 ? (
-        <div className="lato-regular container mt-5" style={{cursor:"pointer"}}>
+        <div className="lato-regular container mt-5" style={{ cursor: "pointer" }}>
           <h3 className="text-white fs-2" style={{ fontWeight: "bolder" }}>
             Top <span className="text-pink">Albums</span>
           </h3>
 
-          {/* For larger screens: Grid layout */}
-          <div className="row d-none d-sm-flex mt-4">
+          {/* Scrollable container */}
+          <div
+            className="scroll-container d-flex mt-4"
+            style={{
+              overflowX: "auto",
+              display: "flex",
+              gap: "15px",
+              paddingBottom: "10px",
+              scrollBehavior: "smooth",
+            }}
+          >
             {data.slice(0, elm).map((song, index) => (
-              <div key={index} className="col-md-2 col-sm-6 mb-4">
+              <div key={index} className="col-md-2 col-sm-6 mb-4" style={{ display: "inline-block" }}>
                 <div className="card bg-dark text-light h-100">
-                  <img  onClick={() => handleIndex(data[index])}
+                  <img
+                    onClick={() => handleIndex(data[index])}
                     src={song.imageUrl}
                     className="card-img-top p-2"
                     alt={song.artistName}
@@ -76,18 +82,21 @@ function TopAlbums() {
               </div>
             ))}
 
-            {/* View All Button */}
+            {/* View All Button (Inside Scrollable Container) */}
             {elm === 5 ? (
-              <div className="col-md-2 col-sm-6 mb-4 d-flex flex-column align-items-center justify-content-center">
+              <div
+                className="d-flex flex-column align-items-center justify-content-center"
+                style={{ display: "inline-block", minWidth: "80px" }}
+              >
                 <button
-                  onClick={() => setElm(12)}
+                  onClick={() => setElm(8)}
                   className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
                   style={{
                     width: "60px",
                     height: "60px",
                     fontSize: "30px",
                     color: "#fff",
-                    fontWeight: "bold"
+                    fontWeight: "bold",
                   }}
                 >
                   <span>+</span>

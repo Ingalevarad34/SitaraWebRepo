@@ -143,7 +143,7 @@ function Header() {
               </Link>
             </li>
             <li className="nav-item ms-5 me-5 lato-bold">
-              <Link className="nav-link" style={{ color: "white" }} to="/discover">
+              <Link className="nav-link" style={{ color: "white" }} to="/premium">
                 Premium
               </Link>
             </li>

@@ -5,8 +5,8 @@ import MusicGenres from "../../components/Home/Music-Geners/music-generes.js";
 import MusicVideo from "../../components/Home/Music-video/music-video.js";
 import NewReleseSongs from "../../components/Home/New-Relese-songs/New-Relese.js";
 import PopularArtists from "../../components/Home/Popular-Artists/popular-artist.js";
-import PremimumTopAlbums from "../../components/Home/Premimum-top-albums/Premimum-albums.js";
-function discover(params) {
+import TopAlbums from "../../components/Home/Top-Albums/top-albums.js";
+function Discover(params) {
     return(
         <>
             <div className="text-white">
@@ -16,7 +16,7 @@ function discover(params) {
                 <PopularArtists/>
                 <MusicVideo />
                 <NewReleseSongs />
-                <PremimumTopAlbums />
+                <TopAlbums />
                 <Footer />
 
             </div>
@@ -24,4 +24,4 @@ function discover(params) {
     );
 }
 
-export default discover;
+export default Discover;

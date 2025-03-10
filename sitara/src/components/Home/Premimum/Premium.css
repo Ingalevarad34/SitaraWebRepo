@@ -1,0 +1,99 @@
+/* General Styling */
+.main-premium {
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Premium Banner */
+  .premium-banner {
+    background-color: #1db954;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .premium-banner h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .premium-banner p {
+    font-size: 1.2rem;
+  }
+  
+  .premium-banner .btn {
+    margin: 10px;
+  }
+  
+  /* Features Section */
+  .premium-features {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    color: #1db954;
+    margin-bottom: 10px;
+  }
+  
+  /* Premium Plans */
+  .premium-plans {
+    background: white;
+    padding: 50px 20px;
+  }
+  
+  .plan-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .plan-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .plan-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .plan-price {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .plan-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plan-card ul li {
+    padding: 5px 0;
+  }
+  
+  .special-discount {
+    background: #fff3cd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  
+  .plan-card.selected {
+    border: 2px solid #1db954;
+    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.4);
+  }
+  
+  .payment-options button {
+    width: 220px;
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+  

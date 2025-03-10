@@ -3,7 +3,6 @@ import Layout from "./pages/layout";
 import Home from "./pages/home/home";
 import Albums from "./pages/albums/albums";
 import Artists from "./pages/artists/artists";
-import Discover from "./pages/discover/dicover";
 import './App.css';
 import Login from './components/FirebaseAuth/login.js';
 import SignUp from './components/FirebaseAuth/register.js';
@@ -13,15 +12,29 @@ import { useState, useEffect } from "react";
 import { auth } from "./components/FirebaseAuth/firebase.js";
 import Profile from "./components/FirebaseAuth/profile.js";
 import PlayList from "./pages/playlist/PlayList.js";
+import Premium from "./components/Home/Premimum/Premium.js";
+import PaymentGateway from "./components/PaymentGateWay/PaymentGateWay.js";
+import AdminPanel from "./components/AdminPanel/AdminPanel.js";
+import Discover from "./pages/discover/dicover.js";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+    // Retrieve user from Local Storage on page reload
+    return JSON.parse(localStorage.getItem("user")) || null;
+  });
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
+      // Store user in Local Storage
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+      } else {
+        localStorage.removeItem("user");
+      }
     });
-    return () => unsubscribe(); // Cleanup subscription on unmount
+
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -37,6 +50,7 @@ function App() {
           path="/register"
           element={user ? <Navigate to="/home" /> : <SignUp />}
         />
+
         {/* Authenticated routes */}
         <Route
           path="/"
@@ -48,8 +62,18 @@ function App() {
           <Route path="discover" element={<Discover />} />
           <Route path="profile" element={<Profile />} />
           <Route path="playlist" element={<PlayList />} />
-          <Route path="login" element={<Login />} />
+          <Route path="premium" element={<Premium />} />
+          <Route path="payment" element={<PaymentGateway />} />
         </Route>
+
+        {/* Admin Panel Route - Accessible via Browser URL */}
+        <Route
+          path="/admin"
+          element={user ? <AdminPanel /> : <Navigate to="/" />}
+        />
+
+        {/* Catch-all route for invalid URLs */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );

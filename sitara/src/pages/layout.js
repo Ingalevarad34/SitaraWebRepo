@@ -63,7 +63,9 @@ function Layout() {
 
           {/* Library Section */}
           <p className="section-title">Library</p>
-          <MenuItem icon={<FaClock />}>Recently Added</MenuItem>
+          <MenuItem icon={<FaClock />}><Link className="blue-item" to="/admin">
+            admin
+          </Link></MenuItem>
           <MenuItem icon={<FaPlay />}>Most Played</MenuItem>
 
           {/* Playlist and Favorites Section */}
