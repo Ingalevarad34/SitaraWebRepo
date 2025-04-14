@@ -18,6 +18,8 @@ function Header() {
       try {
         const response = await axios.get("http://localhost:5000/api/all-songs");
         setMusicData(response.data);
+        // console.log(response.data);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -130,7 +132,7 @@ function Header() {
             onChange={handleSearch}
           />
         </div>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        {/* <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item ms-5 lato-bold">
               <Link className="nav-link" style={{ color: "white" }} to="/artists">
@@ -148,7 +150,7 @@ function Header() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </nav>
 
       {loading && <p className="loading-text">Loading music data...</p>}

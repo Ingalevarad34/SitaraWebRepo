@@ -16,6 +16,11 @@ import Premium from "./components/Home/Premimum/Premium.js";
 import PaymentGateway from "./components/PaymentGateWay/PaymentGateWay.js";
 import AdminPanel from "./components/AdminPanel/AdminPanel.js";
 import Discover from "./pages/discover/dicover.js";
+import AlbumPage from "./pages/albumPageSection/AlbumPage.js";
+import SettingInfo from "./pages/Setting/Setting.js";
+import EnglishSongs from "./pages/English_Song/English_Song.js";
+import MarathiSongs from "./pages/Marathi_Song/Marathi_Song.js";
+import WishList from "./pages/wishList/WishList.js";
 
 function App() {
   const [user, setUser] = useState(() => {
@@ -58,12 +63,17 @@ function App() {
         >
           <Route path="home" element={<Home />} />
           <Route path="albums" element={<Albums />} />
+          <Route path="albumpage" element={<AlbumPage />} />
+          <Route path="englishSong" element={<EnglishSongs />} />
+          <Route path="marathiSong" element={<MarathiSongs />} />
           <Route path="artists" element={<Artists />} />
           <Route path="discover" element={<Discover />} />
           <Route path="profile" element={<Profile />} />
           <Route path="playlist" element={<PlayList />} />
+          <Route path="wishlist" element={< WishList/>} />
           <Route path="premium" element={<Premium />} />
-          <Route path="payment" element={<PaymentGateway />} />
+          <Route path="albumpage" element={<AlbumPage />} />
+          <Route path="setting" element={<SettingInfo />} />
         </Route>
 
         {/* Admin Panel Route - Accessible via Browser URL */}

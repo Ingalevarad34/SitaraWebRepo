@@ -1,11 +1,10 @@
-import './TrendingSongs.css'; // Import custom styles
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
-const TrendingSongs = () => {
+import "./Marathi_Song.css";
+import axios from "axios";
+
+function MarathiSongs() {
   const [data, setData] = useState(null);
-  const [elm, setElm] = useState(7);
+  const [elm, setElm] = useState(5);
   const [showModal, setShowModal] = useState(false);
   const [currentSong, setCurrentSong] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,7 +13,7 @@ const TrendingSongs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/trending-songs");
+        const response = await axios.get("http://localhost:5000/api/marathi-songs");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -55,59 +54,72 @@ const TrendingSongs = () => {
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
-  const addToWishList = async (song) => {
-    try {
-      const response = await axios.post("http://localhost:5000/api/wishList-songs", [song]); // Wrap song in an array
-      console.log("Song added to wishlist:", response.data);
-    } catch (error) {
-      console.error("Error adding song to wishlist:", error);
-    }
-  };
   return (
     <>
-      {
-        data && data.length > 0 ? (<div className="container mt-5 trending-songs lato-regular-table">
-          <h2 className="text-left mb-4 lato-bold">
-            Popular <span className="text-gradient">Songs</span>
-          </h2>
-          <div className="table-responsive">
-            <table className="table table-hover">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th></th>
-                  {/* <th>Release Date</th> */}
-                  <th className='text-center'>Album</th>
-                  <th></th>
-                  {/* <th>Time</th> */}
-                </tr>
-              </thead>
-              <tbody>
-                {data.slice(0, elm).map((song, index) => (
-                  <tr key={song.musicId}  >
-                    <td>{`#${index + 1}`}</td>
-                    <td onClick={() => handleSongClick(song)}>
-                      <img src={song.imageUrl} alt={song.musicName} className="song-image" />
-                      <span className="ps-3">{song.musicName}</span>
-                    </td>
-                    {/* <td>{song.releaseDate}</td> */}
-                    <td className='text-center'>{song.artistName}</td>
-                    <td>
-                      <FontAwesomeIcon onClick={() => addToWishList(song)} icon={faHeart} className="heart-icon" />
-                    </td>
-                    <td>{song.time}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+      {data && data.length > 0 ? (
+        <div className="lato-regular container mt-5">
+          <h3 className="text-white fs-2" style={{ fontWeight: "bolder" }}>
+            Marathi <span className="text-pink">Songs</span>
+          </h3>
+
+          <div
+            className="mt-4 d-flex"
+            style={{
+              overflowX: "auto",
+              whiteSpace: "nowrap",
+              scrollbarWidth: "none",
+              display: "flex",
+              gap: "16px",
+            }}
+          >
+            {data.slice(0, elm).map((song, index) => (
+              <div
+                key={index}
+                className="col-md-2 col-sm-6 mb-4"
+                style={{ flex: "0 0 auto", width: "200px", cursor: "pointer" }}
+                onClick={() => handleSongClick(song)}
+              >
+                <div className="card bg-dark text-light h-100">
+                  <img
+                    src={song.imageUrl}
+                    className="card-img-top img-container p-2"
+                    alt={song.musicName}
+                    style={{ borderRadius: "10px" }}
+                  />
+                  <div className="card-body text-center text-wrap">
+                    <p className="card-title fw-bold" style={{ fontSize: "20px" }}>{song.musicName}</p>
+                    <p className="card-text fs-7" style={{ fontWeight: "300" }}>{song.artistName}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {elm === 5 && (
+              <div
+                onClick={() => setElm(data.length)}
+                className="d-flex flex-column align-items-center justify-content-center"
+                style={{ flex: "0 0 auto", width: "200px", cursor: "pointer" }}
+              >
+                <button
+                  className="view-all-btn btn btn-dark rounded-circle d-flex flex-column align-items-center justify-content-center"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    fontSize: "30px",
+                    color: "#fff",
+                    fontWeight: "bold",
+                  }}
+                >
+                  +
+                </button>
+                <div className="text-white mt-2" style={{ fontSize: "14px" }}>View All</div>
+              </div>
+            )}
           </div>
-          {
-            elm === 7 ? (<div className="text-center mt-3">
-              <button onClick={() => setElm(data.length)} className="btn bg-dark text-white"><span className='pe-2'>+</span>View All</button>
-            </div>) : <></>
-          }
-        </div>) : <div></div>
-      }
+        </div>
+      ) : (
+        <div>No data</div>
+      )}
+
       {showModal && (
         <div className="modal show d-block" style={{ background: "rgba(0, 0, 0, 0.7)" }}>
           <div className="modal-dialog modal-dialog-centered">
@@ -143,6 +155,6 @@ const TrendingSongs = () => {
       )}
     </>
   );
-};
+}
 
-export default TrendingSongs;
+export default MarathiSongs;

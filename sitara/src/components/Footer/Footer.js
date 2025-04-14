@@ -1,4 +1,5 @@
 import './Footer.css';
+import { Link } from "react-router-dom";
 
 function Footer(params) {
     return (
@@ -19,31 +20,47 @@ function Footer(params) {
                             <h3>Melodies</h3>
                             <p className="footer-para"></p>
                             <ul>
-                                <li className="footer-li">Songs</li>
-                                <li className="footer-li">Radio</li>
-                                <li className="footer-li">Podcast</li>
+
+                                <li className="footer-li"><Link className="" to="/">
+                                    Lofi Songs
+                                </Link></li>
+                                <li className="footer-li"><Link className="" to="/">
+                                    Mood Songs
+                                </Link></li>
                             </ul>
                         </div>
                         <div className="col-md-2 col-sm-12">
                             <h3>Access</h3>
                             <p className="footer-para"></p>
                             <ul>
-                                <li className="footer-li">Explore</li>
-                                <li className="footer-li">Artists</li>
-                                <li className="footer-li">Playlist</li>
-                                <li className="footer-li">Albums</li>
-                                <li className="footer-li">Trending</li>
+                                <li className="footer-li"> <li className="footer-li"><Link className="" to="/">
+                                    Explore
+                                </Link></li></li>
+                                <li className="footer-li"> <li className="footer-li"><Link className="" to="/artists">
+                                    Artists
+                                </Link></li></li>
+                                <li className="footer-li"> <li className="footer-li"><Link className="" to="/playlist">
+                                    Playlist
+                                </Link></li></li>
+                                <li className="footer-li"> <li className="footer-li"><Link className="" to="/albumpage">
+                                    Album
+                                </Link></li></li>
                             </ul>
                         </div>
                         <div className="col-md-2 col-sm-12">
                             <h3>Contact</h3>
                             <p className="footer-para"></p>
                             <ul>
-                                <li className="footer-li">About</li>
-                                <li className="footer-li">Profile</li>
-                                <li className="footer-li">Social Media </li>
-                                <li className="footer-li">Albums</li>
-                                <li className="footer-li">Trending</li>
+                                <li className="footer-li">
+                                    <a href="mailto:sitaramusical@gmail.com" style={{ color: "lightblue" }}>
+                                        sitaramusical@gmail.com
+                                    </a>
+                                </li>
+                                <li className="footer-li"><a href="tel:+918080730902" style={{ color: "lightblue" }}>
+                                    +918080730902
+                                </a>
+                                </li>
+
                             </ul>
                         </div>
                         <div className="col-md-2 col-sm-12">

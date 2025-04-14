@@ -14,8 +14,9 @@ function Contact() {
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="fs-2 lato-bold">Join Our Platform</div>
                         <p className="contact-para mt-3 lato-regular-contact">
-                            You can be one of the <span className="text-pink">members</span> of our platform by just adding some necessary information. If you already have an account, you can just hit the <span className="text-primary">Login button</span>.
+                            Got a favorite <span className="text-pink">artist</span> or a song you think we should know about? Feel free to send in your suggestions or ask any questions you have! If you're already part of the community, just hit the <span className="text-primary">Login button</span> to share your thoughts.
                         </p>
+
                     </div>
                     <div className="col-md-6">
                         <div className="d-flex">
@@ -30,12 +31,7 @@ function Contact() {
                             >
                                 {/* Custom Toggle UI */}
                                 <div className="toggle-container d-flex justify-content-center mb-4">
-                                    <button
-                                        className={`toggle-btn ${isSignUp ? "active" : ""}`}
-                                        onClick={() => setIsSignUp(true)}
-                                    >
-                                        Sign Up
-                                    </button>
+
                                     <button
                                         className={`toggle-btn ${!isSignUp ? "active" : ""}`}
                                         onClick={() => setIsSignUp(false)}
@@ -44,97 +40,44 @@ function Contact() {
                                     </button>
                                 </div>
 
-                                {/* Form Section */}
-                                {isSignUp ? (
-                                    // Sign Up
-                                    <form className="container">
-                                        <div className="row">
-                                            <div className="col-md-6 col-sm-6">Name</div>
-                                            <div className="col-md-6 col-sm-6">Number</div>
-                                        </div>
-                                        <div className="row mt-2">
-                                            <div className="col-md-6">
-                                                <div className="input-group">
-                                                    <span className="input-group-text bg-transparent border-3 p-3">
-                                                        <FontAwesomeIcon icon={faUser} style={{ color: "#ffffff" }} />
-                                                    </span>
-                                                    <input
-                                                        className="form-control bg-transparent border-3 p-3"
-                                                        type="text"
-                                                        placeholder="Enter Your Name"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6">
-                                                <div className="input-group">
-                                                    <span className="input-group-text bg-transparent border-3 p-3">
-                                                        <FontAwesomeIcon icon={faPhone} style={{ color: "#ffffff" }} />
-                                                    </span>
-                                                    <input
-                                                        className="form-control bg-transparent border-3 p-3"
-                                                        type="number"
-                                                        placeholder="Enter Your Number"
-                                                    />
-                                                </div>
+
+                                <form>
+                                    <div className="row mt-2">
+                                        <div className="col">Name</div>
+                                    </div>
+                                    <div className="row mt-2">
+                                        <div className="col">
+                                            <div className="input-group">
+                                                <span className="input-group-text bg-transparent border-3 p-3">
+                                                    <FontAwesomeIcon icon={faEnvelope} style={{ color: "#ffffff" }} />
+                                                </span>
+                                                <input
+                                                    className="form-control bg-transparent border-3 p-3"
+                                                    type="email"
+                                                    placeholder="Enter Your Email"
+                                                />
                                             </div>
                                         </div>
-                                        <div className="row mt-2">
-                                            <div className="col">Email</div>
-                                        </div>
-                                        <div className="row mt-2">
-                                            <div className="col">
-                                                <div className="input-group">
-                                                    <span className="input-group-text bg-transparent border-3 p-3">
-                                                        <FontAwesomeIcon icon={faEnvelope} style={{ color: "#ffffff" }} />
-                                                    </span>
-                                                    <input
-                                                        className="form-control bg-transparent border-3 p-3"
-                                                        type="email"
-                                                        placeholder="Enter Your Email"
-                                                    />
-                                                </div>
+                                    </div>
+                                    <div className="row mt-2">
+                                        <div className="col">Password</div>
+                                    </div>
+                                    <div className="row mt-2">
+                                        <div className="col">
+                                            <div className="input-group">
+                                                <span className="input-group-text bg-transparent border-3 p-3">
+                                                    <FontAwesomeIcon icon={faKey} style={{ color: "#ffffff" }} />
+                                                </span>
+                                                <input
+                                                    className="form-control bg-transparent border-3 p-3"
+                                                    type="password"
+                                                    placeholder="Enter Your Password"
+                                                />
                                             </div>
                                         </div>
-                                    </form>
-                                ) : (
-                                    // Login
-                                    <form>
-                                        <div className="row mt-2">
-                                            <div className="col">Email</div>
-                                        </div>
-                                        <div className="row mt-2">
-                                            <div className="col">
-                                                <div className="input-group">
-                                                    <span className="input-group-text bg-transparent border-3 p-3">
-                                                        <FontAwesomeIcon icon={faEnvelope} style={{ color: "#ffffff" }} />
-                                                    </span>
-                                                    <input
-                                                        className="form-control bg-transparent border-3 p-3"
-                                                        type="email"
-                                                        placeholder="Enter Your Email"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="row mt-2">
-                                            <div className="col">Password</div>
-                                        </div>
-                                        <div className="row mt-2">
-                                            <div className="col">
-                                                <div className="input-group">
-                                                    <span className="input-group-text bg-transparent border-3 p-3">
-                                                        <FontAwesomeIcon icon={faKey} style={{ color: "#ffffff" }} />
-                                                    </span>
-                                                    <input
-                                                        className="form-control bg-transparent border-3 p-3"
-                                                        type="password"
-                                                        placeholder="Enter Your Password"
-                                                    />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                )}
+                                    </div>
+                                </form>
+
 
                                 {/* Buttons */}
                                 <div className="row mt-4">

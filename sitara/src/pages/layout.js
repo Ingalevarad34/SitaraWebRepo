@@ -51,7 +51,7 @@ function Layout() {
           </Link>
           </MenuItem>
           <MenuItem icon={<FaMusic />}>
-            <Link className="" to="/">
+            <Link className="" to="/albumpage">
               Albums
             </Link>
           </MenuItem>
@@ -63,23 +63,29 @@ function Layout() {
 
           {/* Library Section */}
           <p className="section-title">Library</p>
-          <MenuItem icon={<FaClock />}><Link className="blue-item" to="/admin">
-            admin
+          <MenuItem icon={<FaClock />}><Link className="gold-item" to="/premium">
+            Premimum
           </Link></MenuItem>
           <MenuItem icon={<FaPlay />}>Most Played</MenuItem>
 
           {/* Playlist and Favorites Section */}
-          <p className="section-title">Playlist and favorite</p>
-          <MenuItem icon={<FaHeart />}>Your Favorites</MenuItem>
+          <p className="section-title">
+
+            Playlist and favorite
+
+          </p>
+          <MenuItem icon={<FaHeart />}> <Link className="" to="/wishlist">Your Favorites  </Link></MenuItem>
           <MenuItem icon={<FaPlus />} className="blue-item">
-          <Link className="blue-item" to="/playlist">
-            View PlayList
-          </Link>
+            <Link className="blue-item" to="/playlist">
+              View PlayList
+            </Link>
           </MenuItem>
 
           {/* General Section */}
           <p className="section-title">General</p>
-          <MenuItem icon={<FaCog />}>Setting</MenuItem>
+          <MenuItem icon={<FaCog />}><Link className="" to="/setting" >
+            Setting
+          </Link></MenuItem>
           <MenuItem icon={<FaSignOutAlt />} className="logout-item">
             <Link className="logout-color" onClick={handleLogout}>
               Logout

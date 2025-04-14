@@ -1,9 +1,11 @@
 // components/Home/IntroSection.js
 // import IntoImg from "../../images/introimg.png";
-import './IntroSection.css';  // Ensure the correct path to the CSS
-import Header from "../../../components/Header/Header.js"; // Ensure Header is included
+import './IntroSection.css';
+import Header from "../../../components/Header/Header.js";
+import { Link } from "react-router-dom";
 
-function IntroSection() {  
+
+function IntroSection() {
   return (
     <>
       <div className="introSection">
@@ -22,10 +24,14 @@ function IntroSection() {
           </p>
           <div className="mt-4 d-flex flex-column flex-md-row justify-content-center justify-content-md-start gap-3">
             <button className="btn btn-outline-light lato-regular border-color">
-              Discover Now
+              <Link className="" to="/discover">
+                Discover Now
+              </Link>
             </button>
             <button className="btn btn-outline-light lato-regular border-color">
-              Albums
+              <Link className="" to="/albumpage">
+                Albums
+              </Link>
             </button>
           </div>
         </div>
