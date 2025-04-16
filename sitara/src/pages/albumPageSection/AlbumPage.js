@@ -153,7 +153,7 @@ function AlbumPage() {
                         />
                     </div>
                     <div className="col-md-9">
-                        <h1 className="display-5 " style={{ fontWeight: "500" }}>Trending Songs <span className="text-danger">Mix</span></h1>
+                        <h1 className="display-5 " style={{ fontWeight: "500" }}>Trending Album Songs <span className="text-danger">Mix</span></h1>
                         <p className="text-light">Your personalized music collection</p>
                         <div className="d-flex align-items-center mb-3">
                             <span>{musicData.length} songs</span>

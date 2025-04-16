@@ -126,3 +126,7 @@
 .btn-color:hover {
     background-color: #ee10b0; /* Slightly darker pink for hover */
 }
+
+.input-search{
+    color: white;
+}
