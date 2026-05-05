@@ -14,7 +14,7 @@ const TrendingSongs = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/trending-songs");
+        const response = await axios.get("http://localhost:8080/TrendingSongs/getAllTrendingSongs");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -57,7 +57,7 @@ const TrendingSongs = () => {
   };
   const addToWishList = async (song) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/wishList-songs", [song]); // Wrap song in an array
+      const response = await axios.post("http://localhost:8080/TrendingSongs/getAllTrendingSongs", [song]); // Wrap song in an array
       console.log("Song added to wishlist:", response.data);
     } catch (error) {
       console.error("Error adding song to wishlist:", error);

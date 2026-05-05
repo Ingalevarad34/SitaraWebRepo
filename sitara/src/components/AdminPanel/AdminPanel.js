@@ -17,7 +17,7 @@ const AdminPanel = () => {
   const apiEndpoints = {
     "Weekly Songs": "http://localhost:5000/api/weekly-songs",
     "New Releases": "http://localhost:5000/api/newRelease-songs",
-    "Trending Songs": "http://localhost:5000/api/trending-songs",
+    "Trending Songs": "http://localhost:5000/api/trending-song",
     "Popular Artists": "http://localhost:5000/api/artist-songs",
     "Music Videos": "http://localhost:5000/api/musicVideo-songs",
     "Top Albums": "http://localhost:5000/api/topAlbums-songs",

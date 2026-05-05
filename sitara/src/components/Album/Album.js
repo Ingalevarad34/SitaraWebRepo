@@ -9,8 +9,9 @@ import PopularArtists from '../Home/Popular-Artists/popular-artist.js';
 function Album() {
     const location = useLocation();
     const { message } = location.state || {};
-    const artistAlbumArray = JSON.parse(message.artistAlbum);
-
+const artistAlbumArray = JSON.parse(
+    message.artistAlbum || message.albumSongs || "[]"
+);
     
 
     const [currentAudio, setCurrentAudio] = useState(null);

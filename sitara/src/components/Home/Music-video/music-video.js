@@ -16,7 +16,7 @@ function MusicVideo() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/musicVideo-songs");
+                const response = await axios.get("http://localhost:8080/MusicVideo/getAllMusicVideo");
                 setData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
