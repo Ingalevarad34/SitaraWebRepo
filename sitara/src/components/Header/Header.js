@@ -12,24 +12,21 @@ function Header() {
   const [noResults, setNoResults] = useState(false);
   const audioRef = useRef(null);
 
-  // Fetch music data from API
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/all-songs");
+        const response = await axios.get("http://localhost:8080/allSongs/getAllSongs");
         setMusicData(response.data);
-        // console.log(response.data);
-        
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
         setLoading(false);
       }
     };
+
     fetchData();
   }, []);
 
-  // Handle user input and filter music
   const handleSearch = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -43,7 +40,11 @@ function Header() {
     const results = musicData.filter((song) => {
       const musicName = song.musicName ? song.musicName.toLowerCase() : "";
       const artistName = song.artistName ? song.artistName.toLowerCase() : "";
-      return musicName.includes(query.toLowerCase()) || artistName.includes(query.toLowerCase());
+
+      return (
+        musicName.includes(query.toLowerCase()) ||
+        artistName.includes(query.toLowerCase())
+      );
     });
 
     setFilteredMusic(results);
@@ -55,7 +56,9 @@ function Header() {
       audioRef.current.pause();
       audioRef.current.load();
     }
+
     setCurrentSong(song);
+
     setTimeout(() => {
       if (audioRef.current) {
         audioRef.current.play();
@@ -65,17 +68,36 @@ function Header() {
 
   const addToPlaylist = async (song) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/playList-songs", [song]); // Wrap song in an array
+      const playlistSong = {
+        musicName: song.musicName,
+        artistName: song.artistName,
+        imageUrl: song.imageUrl,
+        audioUrl: song.audioUrl,
+      };
+
+      const response = await axios.post(
+        "http://localhost:8080/playListSongs/addPlayListSongs",
+        [playlistSong]
+      );
+
       console.log("Song added to playlist:", response.data);
+      alert("Song added to playlist");
     } catch (error) {
       console.error("Error adding song to playlist:", error);
+      alert("Failed to add song to playlist");
     }
   };
 
   return (
     <>
       {searchQuery && (
-        <div className="overlay" onClick={() => { setFilteredMusic([]); setSearchQuery(""); }}>
+        <div
+          className="overlay"
+          onClick={() => {
+            setFilteredMusic([]);
+            setSearchQuery("");
+          }}
+        >
           <div className="search-container" onClick={(e) => e.stopPropagation()}>
             <input
               className="search-input"
@@ -85,29 +107,47 @@ function Header() {
               onChange={handleSearch}
               autoFocus
             />
+
             <div className="search-results">
               {filteredMusic.length > 0 ? (
                 filteredMusic.map((song, index) => (
-                  <div key={song.id || index} className="search-result-item" onClick={() => playSong(song)}>
+                  <div
+                    key={song.musicId || index}
+                    className="search-result-item"
+                    onClick={() => playSong(song)}
+                  >
                     <strong>{song.musicName}</strong> - {song.artistName}
                   </div>
                 ))
               ) : (
-                <p className="no-results-text">No results found for "{searchQuery}"</p>
+                noResults && (
+                  <p className="no-results-text">
+                    No results found for "{searchQuery}"
+                  </p>
+                )
               )}
             </div>
+
             {currentSong && (
               <div className="audio-player">
-                <img src={currentSong.imageUrl} alt={currentSong.musicName} className="player-image" />
-                <div className="player-info">
-                  <strong>{currentSong.musicName}</strong> - {currentSong.artistName}
-                  <i onClick={() => addToPlaylist(currentSong)} className="fa-solid fa-plus ms-4" style={{ cursor: "pointer" }} title="add to playlist">
-                    {
-                      console.log(currentSong)
+                <img
+                  src={currentSong.imageUrl}
+                  alt={currentSong.musicName}
+                  className="player-image"
+                />
 
-                    }
-                  </i>
+                <div className="player-info">
+                  <strong>{currentSong.musicName}</strong> -{" "}
+                  {currentSong.artistName}
+
+                  <i
+                    onClick={() => addToPlaylist(currentSong)}
+                    className="fa-solid fa-plus ms-4"
+                    style={{ cursor: "pointer" }}
+                    title="add to playlist"
+                  ></i>
                 </div>
+
                 <audio className="mt-2" ref={audioRef} controls>
                   <source src={currentSong.audioUrl} type="audio/mpeg" />
                   Your browser does not support the audio element.
@@ -120,10 +160,15 @@ function Header() {
 
       <nav className="navbar navbar-expand-lg navbar-dark bg-transparent px-4">
         <Link className="navbar-brand me-5 gradient-text" to="/"></Link>
+
         <div className="input-group input-design">
           <span className="input-group-text bg-color border-0">
-            <i className="fa-solid fa-magnifying-glass fa-flip-horizontal" style={{ color: "#ffffff" }}></i>
+            <i
+              className="fa-solid fa-magnifying-glass fa-flip-horizontal"
+              style={{ color: "#ffffff" }}
+            ></i>
           </span>
+
           <input
             className="form-control w-50 bg-color border-0"
             type="search"
@@ -132,25 +177,6 @@ function Header() {
             onChange={handleSearch}
           />
         </div>
-        {/* <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item ms-5 lato-bold">
-              <Link className="nav-link" style={{ color: "white" }} to="/artists">
-                About Us
-              </Link>
-            </li>
-            <li className="nav-item ms-5 lato-bold">
-              <Link className="nav-link" style={{ color: "white" }} to="/">
-                Contact
-              </Link>
-            </li>
-            <li className="nav-item ms-5 me-5 lato-bold">
-              <Link className="nav-link" style={{ color: "white" }} to="/premium">
-                Premium
-              </Link>
-            </li>
-          </ul>
-        </div> */}
       </nav>
 
       {loading && <p className="loading-text">Loading music data...</p>}

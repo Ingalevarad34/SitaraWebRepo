@@ -50,11 +50,11 @@ function Layout() {
             Discover
           </Link>
           </MenuItem>
-          <MenuItem icon={<FaMusic />}>
+          {/* <MenuItem icon={<FaMusic />}>
             <Link className="" to="/albumpage">
               Albums
             </Link>
-          </MenuItem>
+          </MenuItem> */}
           <MenuItem icon={<FaUser />}>
             <Link className="" to="/artists">
               Artists

@@ -11,7 +11,7 @@ function Discover(params) {
         <>
             <div className="text-white">
                 <Header/>
-                <MusicGenres />
+                {/* <MusicGenres /> */}
                 <MoodPlaylist />
                 <PopularArtists/>
                 <MusicVideo />

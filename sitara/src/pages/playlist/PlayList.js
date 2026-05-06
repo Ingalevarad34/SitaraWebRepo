@@ -11,7 +11,7 @@ function PlayList() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/playList-songs");
+                const response = await axios.get("http://localhost:8080/playListSongs/getPlayListSongs");
                 setData(response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
